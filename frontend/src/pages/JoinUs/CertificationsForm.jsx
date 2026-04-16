@@ -77,10 +77,10 @@ export default function CertificationsForm() {
     });
 
     try {
-      await fetch("/api/forms", {
+      await fetch(import.meta.env.VITE_GOOGLE_APPS_SCRIPT_URL, {
         method: "POST",
         headers: {
-          "Content-Type": "application/json"
+          "Content-Type": "text/plain"
         },
         body: JSON.stringify(payload),
       });
