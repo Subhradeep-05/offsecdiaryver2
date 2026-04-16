@@ -58,15 +58,30 @@
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .page-container {
-    padding: 2rem 1.2rem;
+    padding: clamp(1rem, 3vw, 2rem) clamp(0.75rem, 3vw, 1.2rem);
   }
 
   .page-title {
-    font-size: 1.6rem;
+    font-size: clamp(1.25rem, 5vw, 1.6rem);
   }
 
   .grid-2,
   .grid-3 {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-container {
+    padding: 1rem 0.75rem;
+  }
+
+  .page-title {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+  }
+
+  .section {
+    margin-bottom: 2rem;
   }
 }

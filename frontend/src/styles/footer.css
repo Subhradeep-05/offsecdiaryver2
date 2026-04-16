@@ -36,9 +36,10 @@
 .footer-inner {
   max-width: 1300px;
   margin: 0 auto;
-  padding: 2.5rem 1.5rem;
+  padding: clamp(1.5rem, 5vw, 2.5rem) clamp(1rem, 4vw, 1.5rem);
   display: grid;
-  gap: 2.5rem;
+  gap: clamp(1.5rem, 4vw, 2.5rem);
+  overflow-x: hidden;
 }
 
 /* ===============================
@@ -52,12 +53,12 @@
 }
 
 .footer-logo {
-  height: 40px;
+  height: clamp(30px, 8vw, 40px);
   filter: drop-shadow(0 0 8px rgba(255, 42, 42, 0.6));
 }
 
 .footer-name {
-  font-size: 1.2rem;
+  font-size: clamp(1rem, 3vw, 1.2rem);
   letter-spacing: 0.3em;
   color: #eaeaea;
   text-shadow:
@@ -71,8 +72,8 @@
 
 .footer-links {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: clamp(1.5rem, 4vw, 2rem);
 }
 
 .footer-col {
@@ -82,14 +83,14 @@
 }
 
 .footer-title {
-  font-size: 0.65rem;
+  font-size: clamp(0.55rem, 2vw, 0.65rem);
   letter-spacing: 0.25em;
   color: rgba(255, 80, 80, 0.75);
   margin-bottom: 0.4rem;
 }
 
 .footer-col a {
-  font-size: 0.7rem;
+  font-size: clamp(0.65rem, 1.8vw, 0.7rem);
   letter-spacing: 0.12em;
   color: #cfcfcf;
   text-decoration: none;
@@ -122,8 +123,68 @@
 
 .footer-socials a {
   color: #cfcfcf;
-  font-size: 1.2rem;
+  font-size: clamp(1rem, 3vw, 1.2rem);
   transition: transform 0.2s ease, color 0.2s ease;
+}
+
+/* ===============================
+   RESPONSIVE
+   =============================== */
+
+@media (max-width: 768px) {
+  .footer-inner {
+    padding: clamp(1.2rem, 4vw, 2rem) clamp(0.8rem, 3vw, 1.2rem);
+    gap: clamp(1rem, 3vw, 2rem);
+  }
+
+  .footer-brand {
+    gap: clamp(0.7rem, 2vw, 1rem);
+  }
+
+  .footer-links {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: clamp(1rem, 3vw, 1.5rem);
+  }
+
+  .footer-title {
+    font-size: clamp(0.5rem, 1.8vw, 0.6rem);
+  }
+
+  .footer-col a {
+    font-size: clamp(0.6rem, 1.6vw, 0.65rem);
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-inner {
+    padding: clamp(1rem, 3vw, 1.5rem) clamp(0.75rem, 2vw, 1rem);
+    gap: clamp(0.8rem, 2vw, 1.2rem);
+  }
+
+  .footer-brand {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: clamp(0.5rem, 1.5vw, 0.75rem);
+  }
+
+  .footer-links {
+    grid-template-columns: 1fr;
+    gap: clamp(1rem, 2vw, 1.2rem);
+  }
+
+  .footer-socials {
+    gap: clamp(1.2rem, 3vw, 1.5rem);
+  }
+
+  .footer-bottom {
+    padding: clamp(0.8rem, 2vw, 1.2rem) clamp(0.75rem, 2vw, 1.5rem);
+    font-size: clamp(0.55rem, 1.5vw, 0.6rem);
+  }
+
+  html, body {
+    overflow-x: hidden;
+  }
 }
 
 .footer-socials a:hover {
