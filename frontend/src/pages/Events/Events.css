@@ -35,6 +35,7 @@
   display: flex;
   justify-content: center;
   gap: 16px;
+  flex-wrap: wrap;
 }
 
 .events-tabs button {
@@ -125,6 +126,7 @@
   color: #999;
   font-size: 0.9rem;
   margin-bottom: 15px;
+  line-height: 1.5;
 }
 
 /* META */
@@ -134,6 +136,7 @@
   gap: 12px;
   color: #777;
   font-size: 0.75rem;
+  margin-bottom: 15px;
 }
 
 .event-meta span {
@@ -144,20 +147,21 @@
 
 /* BUTTON */
 .event-btn {
-  margin-top: auto; /* Ensures the button is pushed to the bottom of the card */
+  margin-top: auto;
   background: transparent;
   border: 1px solid #ff1a1a;
   color: #ff1a1a;
-  padding: 6px 30px;
+  padding: 8px 30px;
   border-radius: 10px;
   font-size: 0.7rem;
   letter-spacing: 1px;
   display: flex;
-  justify-content: center; /* Added to align text */
-  align-items: center; /* Added to vertically center the button */
+  justify-content: center;
+  align-items: center;
   gap: 6px;
   cursor: pointer;
   transition: 0.3s ease;
+  width: 100%;
 }
 
 .event-btn:hover {
@@ -169,7 +173,7 @@
 /* EMPTY STATE */
 .empty-events-state {
   text-align: center;
-  font-family: 'Orbitron', monospace;
+  font-family: "Orbitron", monospace;
   font-size: 2rem;
   color: #dc2626;
   letter-spacing: 5px;
@@ -181,21 +185,46 @@
 }
 
 /* ============================================
-   RESPONSIVE
+   RESPONSIVE STYLES
    ============================================ */
 
-/* Tablet and smaller desktops */
+/* Large Desktops (1200px - 1399px) */
 @media (max-width: 1200px) {
   .events-list {
     max-width: 900px;
   }
+
   .events-container {
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 20px;
   }
+
+  .events-hero h1 {
+    font-size: 2.8rem;
+  }
 }
 
-/* Mobile landscape and portrait */
+/* Tablets (992px - 1199px) */
+@media (max-width: 992px) {
+  .events-page {
+    padding: 35px 20px;
+  }
+
+  .events-list {
+    max-width: 100%;
+  }
+
+  .events-container {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+  }
+
+  .event-poster {
+    height: 160px;
+  }
+}
+
+/* Mobile Landscape (768px - 991px) */
 @media (max-width: 768px) {
   .events-page {
     padding: 30px 15px;
@@ -227,20 +256,21 @@
   }
 
   .events-list {
-    padding: 0 10px;
+    padding: 0 15px;
   }
 
   .events-container {
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 15px;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 18px;
   }
 
   .event-card {
-    padding: 15px;
+    padding: 16px;
   }
 
   .event-poster {
     height: 150px;
+    margin: 8px 0;
   }
 
   .event-card h3 {
@@ -255,7 +285,8 @@
 
   .event-meta {
     font-size: 0.7rem;
-    gap: 8px;
+    gap: 10px;
+    margin-bottom: 12px;
   }
 
   .event-btn {
@@ -270,10 +301,31 @@
   }
 }
 
-/* Small mobile phones */
+/* Small Tablets (600px - 767px) */
+@media (max-width: 600px) {
+  .events-container {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .event-card {
+    max-width: 100%;
+  }
+
+  .events-hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .events-tabs button {
+    padding: 6px 14px;
+    font-size: 0.65rem;
+  }
+}
+
+/* Small Mobile Phones (480px - 599px) */
 @media (max-width: 480px) {
   .events-page {
-    padding: 20px 10px;
+    padding: 20px 12px;
   }
 
   .events-hero {
@@ -300,19 +352,23 @@
     border-radius: 15px;
   }
 
+  .events-list {
+    padding: 0 10px;
+  }
+
   .events-container {
-    grid-template-columns: 1fr;
-    gap: 12px;
+    gap: 14px;
   }
 
   .event-card {
-    padding: 12px;
-    border-radius: 8px;
+    padding: 14px;
+    border-radius: 10px;
   }
 
   .event-poster {
-    height: 120px;
+    height: 140px;
     border-radius: 6px;
+    margin: 6px 0;
   }
 
   .coming-soon-label {
@@ -335,7 +391,12 @@
 
   .event-meta {
     font-size: 0.65rem;
-    gap: 6px;
+    gap: 8px;
+    margin-bottom: 10px;
+  }
+
+  .event-meta span {
+    gap: 3px;
   }
 
   .event-btn {
@@ -351,9 +412,192 @@
   }
 }
 
-/* Extra large screens */
+/* Extra Small Devices (375px - 479px) */
+@media (max-width: 375px) {
+  .events-page {
+    padding: 15px 10px;
+  }
+
+  .events-hero h1 {
+    font-size: 1.3rem;
+  }
+
+  .events-hero p {
+    font-size: 0.7rem;
+  }
+
+  .events-tabs button {
+    padding: 5px 10px;
+    font-size: 0.6rem;
+  }
+
+  .event-card {
+    padding: 12px;
+  }
+
+  .event-poster {
+    height: 120px;
+  }
+
+  .event-card h3 {
+    font-size: 0.95rem;
+  }
+
+  .event-desc {
+    font-size: 0.75rem;
+  }
+
+  .event-meta {
+    font-size: 0.6rem;
+    gap: 6px;
+  }
+
+  .event-btn {
+    padding: 6px 12px;
+    font-size: 0.6rem;
+  }
+
+  .empty-events-state {
+    font-size: 1rem;
+    padding: 25px 10px;
+  }
+}
+
+/* Ultra Small Devices (320px and below) */
+@media (max-width: 320px) {
+  .events-hero h1 {
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+  }
+
+  .events-tabs {
+    gap: 6px;
+  }
+
+  .events-tabs button {
+    padding: 4px 8px;
+    font-size: 0.55rem;
+  }
+
+  .event-poster {
+    height: 100px;
+  }
+
+  .event-card h3 {
+    font-size: 0.9rem;
+  }
+
+  .event-desc {
+    font-size: 0.7rem;
+  }
+}
+
+/* Extra Large Screens (1400px and above) */
 @media (min-width: 1400px) {
   .events-list {
     max-width: 1300px;
+  }
+
+  .events-container {
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 30px;
+  }
+
+  .events-hero h1 {
+    font-size: 3.5rem;
+  }
+
+  .events-hero p {
+    font-size: 1rem;
+  }
+
+  .event-card {
+    padding: 24px;
+  }
+
+  .event-poster {
+    height: 200px;
+  }
+
+  .event-card h3 {
+    font-size: 1.3rem;
+  }
+
+  .event-desc {
+    font-size: 0.95rem;
+  }
+
+  .event-meta {
+    font-size: 0.8rem;
+  }
+
+  .event-btn {
+    padding: 10px 30px;
+    font-size: 0.75rem;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .events-page {
+    background: white;
+    color: black;
+    padding: 20px;
+  }
+
+  .events-tabs button,
+  .event-btn {
+    display: none;
+  }
+
+  .event-card {
+    break-inside: avoid;
+    border: 1px solid #ccc;
+    box-shadow: none;
+  }
+
+  .event-poster {
+    max-width: 200px;
+  }
+
+  .empty-events-state {
+    border: 1px solid #ccc;
+    color: #666;
+  }
+}
+
+/* Dark Mode Support (if user prefers dark mode) */
+@media (prefers-color-scheme: dark) {
+  .events-page {
+    background: #050505;
+  }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .event-card,
+  .event-card:hover,
+  .event-btn,
+  .events-tabs button {
+    transition: none;
+  }
+
+  .event-card:hover {
+    transform: none;
+  }
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+  .event-card {
+    border: 2px solid #ff1a1a;
+  }
+
+  .event-btn {
+    border: 2px solid #ff1a1a;
+  }
+
+  .empty-events-state {
+    border: 2px dashed #ff1a1a;
   }
 }

@@ -1,8 +1,4 @@
-/* ============================================
-   TOOLS CAROUSEL COMPONENT
-   Red/Black/Grey Hacker Theme
-   ============================================ */
-
+/* tools-carousel.css - Interactive Tools Carousel */
 .tools-section {
   position: relative;
   padding: 6rem 0;
@@ -18,7 +14,7 @@
 
 .tools-header .section-tag {
   display: inline-block;
-  font-family: 'Rajdhani', sans-serif;
+  font-family: "Rajdhani", sans-serif;
   font-size: 0.9rem;
   color: #dc2626;
   background: rgba(220, 38, 38, 0.1);
@@ -30,7 +26,7 @@
 }
 
 .tools-header .section-title {
-  font-family: 'Rajdhani', sans-serif;
+  font-family: "Rajdhani", sans-serif;
   font-size: 2.5rem;
   font-weight: 700;
   color: #e5e5e5;
@@ -49,10 +45,9 @@
   font-size: 1rem;
   max-width: 600px;
   margin: 0 auto;
-  font-family: 'Rajdhani', sans-serif;
+  font-family: "Rajdhani", sans-serif;
 }
 
-/* Carousel Container */
 .tools-carousel-container {
   position: relative;
   width: 100%;
@@ -78,7 +73,6 @@
   justify-content: center;
 }
 
-/* Tool Card Wrapper */
 .tool-card-wrapper {
   position: absolute;
   top: 50%;
@@ -89,7 +83,6 @@
   pointer-events: auto;
 }
 
-/* Tool Card */
 .tool-card {
   position: absolute;
   width: 100%;
@@ -115,7 +108,6 @@
   transform: translateY(-5px);
 }
 
-/* Tool Front */
 .tool-front {
   display: flex;
   flex-direction: column;
@@ -125,7 +117,6 @@
   transform-style: preserve-3d;
 }
 
-/* Tool Icon Container */
 .tool-icon-container {
   width: 60px;
   height: 60px;
@@ -154,9 +145,8 @@
   filter: drop-shadow(0 0 8px rgba(220, 38, 38, 0.6));
 }
 
-/* Tool Name */
 .tool-name {
-  font-family: 'Rajdhani', sans-serif;
+  font-family: "Rajdhani", sans-serif;
   font-size: 0.85rem;
   font-weight: 600;
   color: #e5e5e5;
@@ -166,9 +156,8 @@
   text-transform: uppercase;
 }
 
-/* Tool Category */
 .tool-category {
-  font-family: 'Courier New', monospace;
+  font-family: "Courier New", monospace;
   font-size: 0.65rem;
   color: #6b7280;
   background: rgba(220, 38, 38, 0.1);
@@ -177,7 +166,6 @@
   letter-spacing: 1px;
 }
 
-/* Controls */
 .tools-controls {
   position: absolute;
   bottom: 20px;
@@ -221,7 +209,7 @@
 }
 
 .tools-count {
-  font-family: 'Courier New', monospace;
+  font-family: "Courier New", monospace;
   font-size: 0.75rem;
   color: #9ca3af;
   letter-spacing: 1px;
@@ -231,26 +219,12 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  font-family: 'Courier New', monospace;
+  font-family: "Courier New", monospace;
   font-size: 0.7rem;
   color: #22c55e;
   letter-spacing: 1px;
 }
 
-.status-dot {
-  width: 8px;
-  height: 8px;
-  background: #22c55e;
-  border-radius: 50%;
-  animation: pulse-dot 2s ease-in-out infinite;
-}
-
-@keyframes pulse-dot {
-  0%, 100% { opacity: 1; box-shadow: 0 0 5px #22c55e; }
-  50% { opacity: 0.5; box-shadow: 0 0 15px #22c55e; }
-}
-
-/* Drag Hint */
 .tools-drag-hint {
   position: absolute;
   bottom: 90px;
@@ -260,7 +234,7 @@
   align-items: center;
   gap: 0.75rem;
   color: #6b7280;
-  font-family: 'Courier New', monospace;
+  font-family: "Courier New", monospace;
   font-size: 0.75rem;
   letter-spacing: 2px;
   animation: float-hint 3s ease-in-out infinite;
@@ -271,46 +245,100 @@
 }
 
 @keyframes float-hint {
-  0%, 100% { transform: translateX(-50%) translateY(0); opacity: 0.7; }
-  50% { transform: translateX(-50%) translateY(-5px); opacity: 1; }
+  0%,
+  100% {
+    transform: translateX(-50%) translateY(0);
+    opacity: 0.7;
+  }
+  50% {
+    transform: translateX(-50%) translateY(-5px);
+    opacity: 1;
+  }
 }
 
 /* Responsive */
 @media (max-width: 768px) {
+  .tools-section {
+    padding: 4rem 0;
+  }
+
   .tools-header .section-title {
     font-size: 1.75rem;
     gap: 1rem;
   }
-  
+
   .tools-carousel {
     width: 100%;
     height: 300px;
   }
-  
+
   .tool-card-wrapper {
     width: 130px;
     height: 160px;
   }
-  
+
   .tool-icon-container {
     width: 50px;
     height: 50px;
   }
-  
-  .tool-icon {
-    size: 28px;
-  }
-  
+
   .tool-name {
     font-size: 0.75rem;
   }
-  
+
   .tools-controls {
     gap: 1rem;
     padding: 0.75rem 1.5rem;
   }
-  
+
   .tools-drag-hint {
+    font-size: 0.65rem;
+    bottom: 70px;
+  }
+}
+
+@media (max-width: 480px) {
+  .tools-section {
+    padding: 3rem 0;
+  }
+
+  .tools-header .section-title {
+    font-size: 1.25rem;
+  }
+
+  .tools-header .section-tag {
+    font-size: 0.7rem;
+    padding: 0.3rem 1rem;
+  }
+
+  .tools-header p {
+    font-size: 0.8rem;
+  }
+
+  .tool-card-wrapper {
+    width: 110px;
+    height: 140px;
+  }
+
+  .tool-icon-container {
+    width: 40px;
+    height: 40px;
+  }
+
+  .tool-name {
+    font-size: 0.65rem;
+  }
+
+  .tool-category {
+    font-size: 0.55rem;
+  }
+
+  .tools-nav-btn {
+    width: 36px;
+    height: 36px;
+  }
+
+  .tools-count {
     font-size: 0.65rem;
   }
 }

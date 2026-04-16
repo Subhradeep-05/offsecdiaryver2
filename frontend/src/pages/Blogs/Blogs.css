@@ -1,3 +1,5 @@
+/* blogs.css - Complete Responsive Version */
+
 .blogs-page {
   background: #000;
   color: #fff;
@@ -9,7 +11,7 @@
 .custom-section-header {
   text-align: center;
   margin-bottom: 40px;
-  font-family: 'JetBrains Mono', monospace;
+  font-family: "JetBrains Mono", monospace;
 }
 
 .header-tag {
@@ -19,6 +21,7 @@
   font-size: 13px;
   letter-spacing: 3px;
   background: rgba(220, 38, 38, 0.05);
+  display: inline-block;
 }
 
 .header-main-title h2 {
@@ -93,7 +96,7 @@
   background: #dc2626;
   color: #000;
   padding: 4px 12px;
-  font-family: 'JetBrains Mono', monospace;
+  font-family: "JetBrains Mono", monospace;
   font-weight: 800;
   font-size: 11px;
 }
@@ -109,13 +112,15 @@
 .blog-meta-top {
   display: flex;
   justify-content: space-between;
-  font-family: 'JetBrains Mono', monospace;
+  font-family: "JetBrains Mono", monospace;
   font-size: 12px;
   color: #555;
   margin-bottom: 15px;
 }
 
-.blog-id { color: #dc2626; }
+.blog-id {
+  color: #dc2626;
+}
 
 .blog-title {
   font-size: 24px;
@@ -142,20 +147,23 @@
   margin-bottom: 25px;
 }
 
-.author-info, .read-info {
+.author-info,
+.read-info {
   display: flex;
   align-items: center;
   gap: 8px;
 }
 
-.icon-red { color: #dc2626; }
+.icon-red {
+  color: #dc2626;
+}
 
 .btn-read-more {
   background: transparent;
   border: 1px solid #222;
   color: #fff;
   padding: 12px;
-  font-family: 'JetBrains Mono', monospace;
+  font-family: "JetBrains Mono", monospace;
   font-size: 12px;
   cursor: pointer;
   display: flex;
@@ -189,10 +197,11 @@
   justify-content: center;
   gap: 30px;
   margin-bottom: 20px;
+  flex-wrap: wrap;
 }
 
 .coming-soon-title {
-  font-family: 'Orbitron', sans-serif;
+  font-family: "Orbitron", sans-serif;
   font-size: 48px;
   margin: 0;
   color: #fcfcfc;
@@ -210,10 +219,10 @@
 }
 
 /* ============================================
-   RESPONSIVE
+   RESPONSIVE BREAKPOINTS
    ============================================ */
 
-/* Tablet and smaller desktops */
+/* Tablet and smaller desktops (1200px and below) */
 @media (max-width: 1200px) {
   .blogs-page {
     padding: 35px 5%;
@@ -245,7 +254,7 @@
   }
 }
 
-/* Mobile landscape and portrait */
+/* Mobile landscape and portrait (768px and below) */
 @media (max-width: 768px) {
   .blogs-page {
     padding: 30px 4%;
@@ -336,7 +345,7 @@
   }
 }
 
-/* Small mobile phones */
+/* Small mobile phones (480px and below) */
 @media (max-width: 480px) {
   .blogs-page {
     padding: 20px 3%;
@@ -398,7 +407,7 @@
   }
 }
 
-/* Extra large screens */
+/* Extra large screens (1400px and above) */
 @media (min-width: 1400px) {
   .blogs-page {
     padding: 50px 7%;
@@ -406,5 +415,81 @@
 
   .blogs-grid {
     max-width: 1600px;
+  }
+
+  .blog-image-wrapper {
+    height: 240px;
+  }
+
+  .blog-title {
+    font-size: 26px;
+  }
+
+  .blog-excerpt {
+    font-size: 16px;
+  }
+}
+
+/* Ultra wide screens (1800px and above) */
+@media (min-width: 1800px) {
+  .blogs-page {
+    padding: 60px 10%;
+  }
+
+  .blogs-grid {
+    max-width: 1800px;
+    gap: 50px;
+  }
+
+  .blog-image-wrapper {
+    height: 260px;
+  }
+}
+
+/* Landscape orientation for mobile devices */
+@media (max-width: 768px) and (orientation: landscape) {
+  .blogs-page {
+    padding: 20px 4%;
+  }
+
+  .blogs-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+  }
+
+  .blog-image-wrapper {
+    height: 150px;
+  }
+
+  .coming-soon-container {
+    min-height: 50vh;
+  }
+}
+
+/* Dark mode support (respects system preference) */
+@media (prefers-color-scheme: dark) {
+  .blogs-page {
+    background: #000;
+  }
+
+  .blog-card {
+    background: #0a0a0a;
+  }
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  .blog-card,
+  .blog-card img,
+  .btn-read-more {
+    transition: none;
+  }
+
+  .blog-card:hover {
+    transform: none;
+  }
+
+  .blog-card:hover img {
+    transform: none;
   }
 }

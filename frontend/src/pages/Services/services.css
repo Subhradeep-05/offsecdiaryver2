@@ -4,7 +4,12 @@
 .services-page {
   background: #111111;
   color: #e5e5e5;
-  font-family: 'Rajdhani', 'Inter', system-ui, -apple-system, sans-serif;
+  font-family:
+    "Rajdhani",
+    "Inter",
+    system-ui,
+    -apple-system,
+    sans-serif;
   overflow-x: hidden;
   min-height: 100vh;
 }
@@ -33,7 +38,7 @@
 .custom-section-header {
   text-align: center;
   margin: 40px 0 20px;
-  font-family: 'JetBrains Mono', 'Courier New', monospace;
+  font-family: "JetBrains Mono", "Courier New", monospace;
 }
 
 .header-tag-box {
@@ -49,7 +54,7 @@
   background: rgba(220, 38, 38, 0.1);
   text-transform: uppercase;
   border-radius: 4px;
-  font-family: 'Courier New', monospace;
+  font-family: "Courier New", monospace;
 }
 
 .header-main-title {
@@ -57,16 +62,18 @@
   align-items: center;
   justify-content: center;
   gap: 35px;
+  flex-wrap: wrap;
 }
 
 .header-main-title h2 {
-  font-family: 'Orbitron', monospace;
+  font-family: "Orbitron", monospace;
   font-size: 2.5rem;
   font-weight: 700;
   letter-spacing: 3px;
   margin: 0;
   color: #ffffff;
   text-transform: uppercase;
+  text-align: center;
 }
 
 .accent-line {
@@ -91,7 +98,7 @@
 }
 
 .services-hero h1 {
-  font-family: 'Orbitron', monospace;
+  font-family: "Orbitron", monospace;
   font-size: 3rem;
   font-weight: 700;
 }
@@ -133,7 +140,7 @@
 }
 
 .service-content h3 {
-  font-family: 'Orbitron', monospace;
+  font-family: "Orbitron", monospace;
   font-size: 1.1rem;
   margin-bottom: 12px;
   line-height: 1.4;
@@ -154,6 +161,8 @@
   margin: 15px 0;
   border-top: 1px solid #1a1a1a;
   padding-top: 15px;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 .service-link {
@@ -186,7 +195,11 @@
    ========================================================================== */
 .tools-interactive-section {
   padding: 40px 6%;
-  background: radial-gradient(circle at 0% 50%, rgba(220, 38, 38, 0.03) 0%, transparent 40%);
+  background: radial-gradient(
+    circle at 0% 50%,
+    rgba(220, 38, 38, 0.03) 0%,
+    transparent 40%
+  );
 }
 
 .interactive-container {
@@ -220,8 +233,8 @@
 }
 
 .tool-card:hover {
-  background: rgba(220,38,38,0.1);
-  border-color: rgba(220,38,38,0.3);
+  background: rgba(220, 38, 38, 0.1);
+  border-color: rgba(220, 38, 38, 0.3);
   transform: translateY(-2px);
 }
 
@@ -239,7 +252,7 @@
   justify-content: center;
   width: 48px;
   height: 48px;
-  background: rgba(0,0,0,0.3);
+  background: rgba(0, 0, 0, 0.3);
   border-radius: 8px;
 }
 
@@ -253,7 +266,7 @@
 
 .tool-card-info h4 {
   margin: 0 0 4px 0;
-  font-family: 'Orbitron', monospace;
+  font-family: "Orbitron", monospace;
   font-size: 13px;
   font-weight: 600;
   letter-spacing: 0.5px;
@@ -267,7 +280,7 @@
 .tool-card-info span {
   font-size: 11px;
   opacity: 0.8;
-  font-family: 'Rajdhani', sans-serif;
+  font-family: "Rajdhani", sans-serif;
   line-height: 1.2;
 }
 
@@ -349,7 +362,8 @@
 /* ==========================================================================
    6. RESPONSIVE DESIGN
    ========================================================================== */
-/* Tablet and smaller desktops */
+
+/* Large Desktops (1200px - 1399px) */
 @media (max-width: 1200px) {
   .services-grid {
     padding: 0 5%;
@@ -371,9 +385,59 @@
     max-width: 100%;
     width: 100%;
   }
+
+  .services-hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .header-main-title h2 {
+    font-size: 2.2rem;
+  }
+
+  .accent-line {
+    width: 80px;
+  }
 }
 
-/* Mobile landscape and portrait */
+/* Tablets (992px - 1199px) */
+@media (max-width: 992px) {
+  .services-section-wrapper {
+    padding-top: 30px;
+  }
+
+  .custom-section-header {
+    margin: 30px 0 15px;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 16px;
+  }
+
+  .service-content h3 {
+    font-size: 1rem;
+  }
+
+  .tools-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+
+  .tool-detail-header {
+    gap: 15px;
+  }
+
+  .tool-icon-box {
+    width: 70px;
+    height: 70px;
+  }
+
+  .tool-header-content h2 {
+    font-size: 1.5rem;
+  }
+}
+
+/* Mobile Landscape (768px - 991px) */
 @media (max-width: 768px) {
   .services-page {
     height: auto;
@@ -386,8 +450,16 @@
     padding-top: 20px;
   }
 
+  .services-hero {
+    padding: 30px 15px 15px;
+  }
+
+  .services-hero h1 {
+    font-size: 2rem;
+  }
+
   .custom-section-header {
-    margin: 30px 0 15px;
+    margin: 25px 0 12px;
   }
 
   .header-tag {
@@ -402,7 +474,7 @@
   }
 
   .header-main-title h2 {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     letter-spacing: 2px;
   }
 
@@ -412,8 +484,9 @@
 
   .services-grid {
     padding: 0 4%;
-    gap: 12px;
+    gap: 14px;
     grid-template-columns: 1fr;
+    padding-bottom: 30px;
   }
 
   .service-card {
@@ -423,11 +496,11 @@
   }
 
   .service-content {
-    padding: 14px;
+    padding: 16px;
   }
 
   .service-content h3 {
-    font-size: 1.1rem;
+    font-size: 1rem;
     margin-bottom: 8px;
   }
 
@@ -462,7 +535,8 @@
   }
 
   .tool-card {
-    padding: 14px 16px;
+    padding: 12px 14px;
+    min-height: 70px;
   }
 
   .tool-card-icon {
@@ -481,20 +555,20 @@
   .tool-detail-card {
     max-width: 100%;
     width: 100%;
-    padding: 18px;
-    border-radius: 12px;
+    padding: 20px;
+    border-radius: 16px;
   }
 
   .tool-detail-header {
     flex-direction: column;
     text-align: center;
-    padding-bottom: 12px;
+    padding-bottom: 15px;
     gap: 12px;
   }
 
   .tool-icon-box {
-    width: 60px;
-    height: 60px;
+    width: 65px;
+    height: 65px;
   }
 
   .tool-header-content h2 {
@@ -503,7 +577,7 @@
 
   .tool-status-badge {
     font-size: 9px;
-    padding: 4px 10px;
+    padding: 4px 12px;
   }
 
   .tool-section h3 {
@@ -515,13 +589,46 @@
   }
 }
 
+/* Small Tablets (600px - 767px) */
+@media (max-width: 600px) {
+  .services-hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .header-main-title h2 {
+    font-size: 1.4rem;
+  }
+
+  .accent-line {
+    width: 40px;
+  }
+
+  .tools-list {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .tool-detail-card {
+    padding: 18px;
+  }
+}
+
+/* Small Mobile Phones (480px - 599px) */
 @media (max-width: 480px) {
+  .services-hero {
+    padding: 20px 12px 12px;
+  }
+
+  .services-hero h1 {
+    font-size: 1.5rem;
+  }
+
   .custom-section-header {
-    margin: 25px 0 12px;
+    margin: 20px 0 10px;
   }
 
   .header-tag {
-    font-size: 10px;
+    font-size: 9px;
     padding: 4px 10px;
     letter-spacing: 0.5px;
   }
@@ -531,7 +638,7 @@
   }
 
   .header-main-title h2 {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     letter-spacing: 1px;
   }
 
@@ -542,15 +649,26 @@
 
   .services-grid {
     padding: 0 3%;
-    gap: 10px;
+    gap: 12px;
+    padding-bottom: 25px;
+  }
+
+  .service-content {
+    padding: 14px;
   }
 
   .service-content h3 {
-    font-size: 1rem;
+    font-size: 0.95rem;
   }
 
   .service-content p {
     font-size: 0.85rem;
+  }
+
+  .service-meta {
+    font-size: 11px;
+    margin: 12px 0;
+    padding-top: 12px;
   }
 
   .tools-interactive-section {
@@ -558,17 +676,16 @@
   }
 
   .interactive-container {
-    gap: 25px;
+    gap: 20px;
     padding: 0 5px;
   }
 
   .tools-list {
-    grid-template-columns: 1fr;
-    gap: 10px;
+    gap: 8px;
   }
 
   .tool-card {
-    padding: 12px 14px;
+    padding: 10px 12px;
   }
 
   .tool-card-icon {
@@ -586,17 +703,17 @@
 
   .tool-detail-card {
     padding: 16px;
-    border-radius: 10px;
+    border-radius: 12px;
   }
 
   .tool-detail-header {
-    padding-bottom: 10px;
+    padding-bottom: 12px;
     gap: 10px;
   }
 
   .tool-icon-box {
-    width: 50px;
-    height: 50px;
+    width: 55px;
+    height: 55px;
   }
 
   .tool-header-content h2 {
@@ -608,21 +725,88 @@
     padding: 3px 8px;
   }
 
+  .tool-section {
+    margin-bottom: 20px;
+  }
+
   .tool-section h3 {
-    font-size: 0.75rem;
+    font-size: 0.7rem;
+    letter-spacing: 1px;
   }
 
   .tool-section p {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     line-height: 1.5;
   }
 }
 
-/* Extra large screens */
+/* Extra Small Devices (375px - 479px) */
+@media (max-width: 375px) {
+  .services-hero h1 {
+    font-size: 1.3rem;
+  }
+
+  .header-main-title h2 {
+    font-size: 1rem;
+  }
+
+  .accent-line {
+    width: 25px;
+  }
+
+  .service-content h3 {
+    font-size: 0.9rem;
+  }
+
+  .tool-icon-box {
+    width: 50px;
+    height: 50px;
+  }
+
+  .tool-header-content h2 {
+    font-size: 1rem;
+  }
+}
+
+/* Ultra Small Devices (320px and below) */
+@media (max-width: 320px) {
+  .services-hero h1 {
+    font-size: 1.2rem;
+  }
+
+  .header-main-title h2 {
+    font-size: 0.9rem;
+  }
+
+  .accent-line {
+    width: 20px;
+  }
+
+  .service-content h3 {
+    font-size: 0.85rem;
+  }
+
+  .tool-card-icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .tool-card-info h4 {
+    font-size: 10px;
+  }
+
+  .tool-icon-box {
+    width: 45px;
+    height: 45px;
+  }
+}
+
+/* Extra Large Screens (1400px and above) */
 @media (min-width: 1400px) {
   .services-grid {
     padding: 0 8%;
     max-width: 1600px;
+    gap: 25px;
   }
 
   .custom-section-header {
@@ -637,6 +821,10 @@
     width: 120px;
   }
 
+  .services-hero h1 {
+    font-size: 3.5rem;
+  }
+
   .interactive-container {
     max-width: 1600px;
   }
@@ -648,5 +836,78 @@
 
   .tool-header-content h2 {
     font-size: 2rem;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  }
+}
+
+/* Print Styles */
+@media print {
+  .services-page {
+    background: white;
+    color: black;
+    padding: 20px;
+  }
+
+  .service-link,
+  .tools-interactive-section,
+  .service-meta {
+    display: none;
+  }
+
+  .service-card {
+    break-inside: avoid;
+    page-break-inside: avoid;
+    border: 1px solid #ccc;
+    box-shadow: none;
+  }
+
+  .service-card:hover {
+    transform: none;
+  }
+
+  .header-main-title h2 {
+    color: #333;
+  }
+
+  .accent-line {
+    background: #ccc;
+  }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .service-card:hover,
+  .tool-card:hover,
+  .service-link:hover {
+    transform: none;
+  }
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+  .service-card,
+  .tool-card,
+  .tool-detail-card {
+    border: 2px solid #dc2626;
+  }
+
+  .header-tag {
+    border: 2px solid #dc2626;
+  }
+
+  .service-link {
+    color: #dc2626;
+    text-decoration: underline;
   }
 }

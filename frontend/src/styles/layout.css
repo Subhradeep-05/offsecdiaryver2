@@ -7,12 +7,18 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  position: relative;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 /* Main content area between header & footer */
 .app-content {
   flex: 1;
   width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Constrained content container */
@@ -20,25 +26,37 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 3rem 1.5rem;
+  width: 100%;
+  position: relative;
 }
 
 /* Page titles */
 .page-title {
   font-size: 2rem;
   margin-bottom: 1.5rem;
+  font-family: var(--font-orbitron, "Orbitron", monospace);
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: var(--text-main, #eaeaea);
+  line-height: 1.3;
 }
 
 /* Page subtitles / intro text */
 .page-subtitle {
   max-width: 720px;
   margin-bottom: 2.5rem;
-  color: var(--text-muted);
+  color: var(--text-muted, #9a9a9a);
   line-height: 1.6;
+  font-size: 1rem;
 }
 
 /* Section spacing */
 .section {
   margin-bottom: 4rem;
+}
+
+.section:last-child {
+  margin-bottom: 0;
 }
 
 /* Simple grid helper */
@@ -55,7 +73,232 @@
   grid-template-columns: repeat(3, 1fr);
 }
 
-/* Responsive adjustments */
+.grid-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* Grid with auto-fit for responsiveness */
+.grid-auto {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+/* ===============================
+   UTILITY CLASSES
+   =============================== */
+
+/* Text alignment */
+.text-center {
+  text-align: center;
+}
+.text-left {
+  text-align: left;
+}
+.text-right {
+  text-align: right;
+}
+
+/* Spacing utilities */
+.mt-0 {
+  margin-top: 0;
+}
+.mt-1 {
+  margin-top: 0.5rem;
+}
+.mt-2 {
+  margin-top: 1rem;
+}
+.mt-3 {
+  margin-top: 1.5rem;
+}
+.mt-4 {
+  margin-top: 2rem;
+}
+.mt-5 {
+  margin-top: 3rem;
+}
+
+.mb-0 {
+  margin-bottom: 0;
+}
+.mb-1 {
+  margin-bottom: 0.5rem;
+}
+.mb-2 {
+  margin-bottom: 1rem;
+}
+.mb-3 {
+  margin-bottom: 1.5rem;
+}
+.mb-4 {
+  margin-bottom: 2rem;
+}
+.mb-5 {
+  margin-bottom: 3rem;
+}
+
+.pt-0 {
+  padding-top: 0;
+}
+.pt-1 {
+  padding-top: 0.5rem;
+}
+.pt-2 {
+  padding-top: 1rem;
+}
+.pt-3 {
+  padding-top: 1.5rem;
+}
+.pt-4 {
+  padding-top: 2rem;
+}
+.pt-5 {
+  padding-top: 3rem;
+}
+
+.pb-0 {
+  padding-bottom: 0;
+}
+.pb-1 {
+  padding-bottom: 0.5rem;
+}
+.pb-2 {
+  padding-bottom: 1rem;
+}
+.pb-3 {
+  padding-bottom: 1.5rem;
+}
+.pb-4 {
+  padding-bottom: 2rem;
+}
+.pb-5 {
+  padding-bottom: 3rem;
+}
+
+/* Flex utilities */
+.d-flex {
+  display: flex;
+}
+.flex-column {
+  flex-direction: column;
+}
+.flex-row {
+  flex-direction: row;
+}
+.flex-wrap {
+  flex-wrap: wrap;
+}
+.flex-nowrap {
+  flex-wrap: nowrap;
+}
+
+.justify-start {
+  justify-content: flex-start;
+}
+.justify-end {
+  justify-content: flex-end;
+}
+.justify-center {
+  justify-content: center;
+}
+.justify-between {
+  justify-content: space-between;
+}
+.justify-around {
+  justify-content: space-around;
+}
+.justify-evenly {
+  justify-content: space-evenly;
+}
+
+.align-start {
+  align-items: flex-start;
+}
+.align-end {
+  align-items: flex-end;
+}
+.align-center {
+  align-items: center;
+}
+.align-stretch {
+  align-items: stretch;
+}
+
+.gap-1 {
+  gap: 0.5rem;
+}
+.gap-2 {
+  gap: 1rem;
+}
+.gap-3 {
+  gap: 1.5rem;
+}
+.gap-4 {
+  gap: 2rem;
+}
+.gap-5 {
+  gap: 3rem;
+}
+
+/* Width utilities */
+.w-100 {
+  width: 100%;
+}
+.w-75 {
+  width: 75%;
+}
+.w-50 {
+  width: 50%;
+}
+.w-25 {
+  width: 25%;
+}
+.w-auto {
+  width: auto;
+}
+
+/* ===============================
+   RESPONSIVE BREAKPOINTS
+   =============================== */
+
+/* Large Desktops (1200px - 1399px) */
+@media (max-width: 1200px) {
+  .page-container {
+    max-width: 1000px;
+    padding: 2.5rem 1.5rem;
+  }
+
+  .grid-4 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Tablets (992px - 1199px) */
+@media (max-width: 992px) {
+  .page-container {
+    max-width: 100%;
+    padding: 2rem 1.5rem;
+  }
+
+  .page-title {
+    font-size: 1.8rem;
+  }
+
+  .grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .section {
+    margin-bottom: 3rem;
+  }
+}
+
+/* Mobile Landscape (768px - 991px) */
 @media (max-width: 768px) {
   .page-container {
     padding: clamp(1rem, 3vw, 2rem) clamp(0.75rem, 3vw, 1.2rem);
@@ -63,14 +306,70 @@
 
   .page-title {
     font-size: clamp(1.25rem, 5vw, 1.6rem);
+    margin-bottom: 1rem;
+  }
+
+  .page-subtitle {
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
   }
 
   .grid-2,
-  .grid-3 {
+  .grid-3,
+  .grid-4 {
     grid-template-columns: 1fr;
+  }
+
+  .grid-auto {
+    grid-template-columns: 1fr;
+  }
+
+  .section {
+    margin-bottom: 2.5rem;
+  }
+
+  /* Responsive flex utilities */
+  .flex-column-mobile {
+    flex-direction: column !important;
+  }
+
+  .text-center-mobile {
+    text-align: center !important;
+  }
+
+  .gap-mobile-1 {
+    gap: 0.5rem !important;
+  }
+
+  .gap-mobile-2 {
+    gap: 1rem !important;
   }
 }
 
+/* Small Tablets (600px - 767px) */
+@media (max-width: 600px) {
+  .page-container {
+    padding: 1.5rem 1rem;
+  }
+
+  .page-title {
+    font-size: 1.4rem;
+  }
+
+  .page-subtitle {
+    font-size: 0.85rem;
+  }
+
+  .section {
+    margin-bottom: 2rem;
+  }
+
+  .grid {
+    gap: 1.5rem;
+  }
+}
+
+/* Small Mobile Phones (480px - 599px) */
 @media (max-width: 480px) {
   .page-container {
     padding: 1rem 0.75rem;
@@ -78,10 +377,303 @@
 
   .page-title {
     font-size: 1.25rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .page-subtitle {
+    font-size: 0.8rem;
+    margin-bottom: 1.5rem;
   }
 
   .section {
+    margin-bottom: 1.5rem;
+  }
+
+  .grid {
+    gap: 1rem;
+  }
+
+  /* Additional responsive spacing */
+  .mt-4 {
+    margin-top: 1.5rem;
+  }
+  .mt-5 {
+    margin-top: 2rem;
+  }
+  .mb-4 {
+    margin-bottom: 1.5rem;
+  }
+  .mb-5 {
     margin-bottom: 2rem;
+  }
+}
+
+/* Extra Small Devices (375px - 479px) */
+@media (max-width: 375px) {
+  .page-container {
+    padding: 0.875rem 0.625rem;
+  }
+
+  .page-title {
+    font-size: 1.1rem;
+  }
+
+  .page-subtitle {
+    font-size: 0.75rem;
+  }
+}
+
+/* Ultra Small Devices (320px and below) */
+@media (max-width: 320px) {
+  .page-container {
+    padding: 0.75rem 0.5rem;
+  }
+
+  .page-title {
+    font-size: 1rem;
+  }
+
+  .section {
+    margin-bottom: 1.25rem;
+  }
+}
+
+/* Extra Large Screens (1400px and above) */
+@media (min-width: 1400px) {
+  .page-container {
+    max-width: 1400px;
+    padding: 4rem 2rem;
+  }
+
+  .page-title {
+    font-size: 2.5rem;
+  }
+
+  .page-subtitle {
+    font-size: 1.1rem;
+    max-width: 800px;
+  }
+
+  .section {
+    margin-bottom: 5rem;
+  }
+
+  .grid {
+    gap: 2.5rem;
+  }
+
+  .grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .grid-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* ===============================
+   UTILITY RESPONSIVE CLASSES
+   =============================== */
+
+/* Hide on specific breakpoints */
+.hide-on-mobile {
+  display: block;
+}
+
+.hide-on-tablet {
+  display: block;
+}
+
+.hide-on-desktop {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .hide-on-mobile {
+    display: none !important;
+  }
+
+  .show-on-mobile {
+    display: block !important;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .hide-on-tablet {
+    display: none !important;
+  }
+
+  .show-on-tablet {
+    display: block !important;
+  }
+}
+
+@media (min-width: 1025px) {
+  .hide-on-desktop {
+    display: none !important;
+  }
+
+  .show-on-desktop {
+    display: block !important;
+  }
+}
+
+/* ===============================
+   ANIMATIONS & TRANSITIONS
+   =============================== */
+
+.fade-in {
+  animation: fadeIn 0.5s ease-in;
+}
+
+.slide-up {
+  animation: slideUp 0.4s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===============================
+   LOADING STATES
+   =============================== */
+
+.loading-skeleton {
+  background: linear-gradient(
+    90deg,
+    var(--bg-card, #1a1a1a) 25%,
+    var(--bg-panel, #111111) 50%,
+    var(--bg-card, #1a1a1a) 75%
+  );
+  background-size: 200% 100%;
+  animation: skeletonLoading 1.5s infinite;
+  border-radius: 4px;
+}
+
+@keyframes skeletonLoading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* ===============================
+   PRINT STYLES
+   =============================== */
+
+@media print {
+  .app-shell {
+    display: block;
+    min-height: auto;
+  }
+
+  .app-content {
+    display: block;
+  }
+
+  .page-container {
+    max-width: 100%;
+    padding: 1rem;
+    margin: 0;
+  }
+
+  .page-title {
+    font-size: 18pt;
+    color: black;
+  }
+
+  .grid,
+  .grid-2,
+  .grid-3,
+  .grid-4 {
+    display: block;
+  }
+
+  .section {
+    margin-bottom: 1rem;
+    break-inside: avoid;
+  }
+}
+
+/* ===============================
+   REDUCED MOTION
+   =============================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .fade-in,
+  .slide-up {
+    animation: none;
+  }
+
+  .loading-skeleton {
+    animation: none;
+  }
+}
+
+/* ===============================
+   SCROLL BEHAVIOR
+   =============================== */
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* ===============================
+   FOCUS STYLES
+   =============================== */
+
+*:focus-visible {
+  outline: 2px solid var(--accent-green, #00ff99);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* ===============================
+   CONTAINER QUERIES (Modern browsers)
+   =============================== */
+
+@container (max-width: 600px) {
+  .grid-2,
+  .grid-3,
+  .grid-4 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ===============================
+   DARK MODE SUPPORT
+   =============================== */
+
+@media (prefers-color-scheme: dark) {
+  .page-container {
+    background: transparent;
   }
 }

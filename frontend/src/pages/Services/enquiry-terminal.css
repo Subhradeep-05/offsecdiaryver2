@@ -61,7 +61,7 @@
 .terminal-title {
   display: flex;
   flex-direction: column;
-  align-items: auto;
+  align-items: center;
   gap: 10px;
   margin-bottom: 5px;
 }
@@ -71,9 +71,10 @@
   font-size: 48px;
   font-weight: 900;
   color: #a92121;
-  margin: 5;
+  margin: 0;
   letter-spacing: 3px;
   text-transform: uppercase;
+  text-align: center;
 }
 
 .accent-line {
@@ -185,6 +186,8 @@
   font-size: 14px;
   transition: all 0.3s ease;
   resize: vertical;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .form-group input::placeholder,
@@ -248,6 +251,7 @@
   gap: 12px;
   transition: all 0.3s ease;
   margin-top: 20px;
+  width: 100%;
 }
 
 .submit-button:hover:not(:disabled) {
@@ -276,6 +280,8 @@
   align-items: center;
   gap: 15px;
   text-align: center;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .notice-badge {
@@ -322,70 +328,125 @@
   transform: scale(1.05);
 }
 
-/* Responsive Design */
+/* ============================================
+   RESPONSIVE STYLES
+   ============================================ */
+
+/* Large Desktops (1200px - 1399px) */
+@media (max-width: 1200px) {
+  .enquiry-terminal-container {
+    max-width: 800px;
+  }
+
+  .terminal-title h2 {
+    font-size: 42px;
+  }
+
+  .section-title {
+    font-size: 32px;
+  }
+}
+
+/* Tablets (992px - 1199px) */
+@media (max-width: 992px) {
+  .enquiry-terminal-page {
+    padding: 30px 20px;
+  }
+
+  .enquiry-terminal-container {
+    max-width: 700px;
+  }
+
+  .terminal-title h2 {
+    font-size: 38px;
+    letter-spacing: 2px;
+  }
+
+  .section-title {
+    font-size: 28px;
+  }
+
+  .service-info-card {
+    padding: 25px;
+  }
+
+  .terminal-form-section {
+    padding: 25px;
+  }
+}
+
+/* Mobile Landscape (768px - 991px) */
 @media (max-width: 768px) {
   .enquiry-terminal-page {
     padding: 20px 15px;
   }
 
+  .enquiry-terminal-container {
+    max-width: 100%;
+  }
+
+  .terminal-tag-box {
+    padding: 8px 16px;
+  }
+
+  .terminal-tag {
+    font-size: 10px;
+    letter-spacing: 1.5px;
+  }
+
   .terminal-title {
-    flex-wrap: wrap;
-    gap: 10px;
+    gap: 8px;
   }
 
-  .terminal-title h1 {
+  .terminal-title h2 {
     font-size: 32px;
+    letter-spacing: 2px;
   }
 
-  .terminal-form-section {
-    padding: 30px 20px;
-  }
-
-  .terminal-form {
-    gap: 20px;
-  }
-
-  .accent-line {
-    max-width: 80px;
-  }
-}
-
-@media (max-width: 480px) {
-  .enquiry-terminal-page {
-    padding: 15px 10px;
-  }
-
-  .enquiry-terminal-page .back-button {
-    font-size: 12px;
-    padding: 10px 16px;
-  }
-
-  .terminal-title h1 {
+  .section-title {
     font-size: 24px;
+    letter-spacing: 2px;
   }
 
   .terminal-subtitle {
-    font-size: 14px;
+    font-size: 16px;
+    margin: 15px 0 8px 0;
   }
 
   .terminal-description {
-    font-size: 13px;
+    font-size: 14px;
+    margin: 12px 0 0 0;
   }
 
   .service-info-card {
     padding: 20px;
+    margin-bottom: 25px;
   }
 
   .service-card-content h3 {
-    font-size: 18px;
+    font-size: 20px;
+    margin-bottom: 12px;
   }
 
   .service-card-content p {
-    font-size: 13px;
+    font-size: 14px;
+    line-height: 1.6;
   }
 
   .terminal-form-section {
-    padding: 20px 15px;
+    padding: 25px 20px;
+  }
+
+  .terminal-form {
+    gap: 25px;
+  }
+
+  .form-group {
+    gap: 10px;
+  }
+
+  .form-group label {
+    font-size: 12px;
   }
 
   .form-group input,
@@ -396,7 +457,459 @@
   }
 
   .submit-button {
-    padding: 14px 24px;
+    padding: 14px 30px;
+    font-size: 13px;
+    margin-top: 15px;
+  }
+
+  .security-notice {
+    margin-top: 30px;
+    padding: 16px 20px;
+    gap: 12px;
+  }
+
+  .notice-badge {
+    font-size: 20px;
+  }
+
+  .security-notice p {
+    font-size: 13px;
+  }
+
+  .not-found {
+    padding: 40px 15px;
+  }
+
+  .not-found h1 {
+    font-size: 36px;
+  }
+
+  .not-found button {
+    padding: 12px 24px;
+    font-size: 13px;
+  }
+}
+
+/* Small Tablets (600px - 767px) */
+@media (max-width: 600px) {
+  .enquiry-terminal-page {
+    padding: 18px 12px;
+  }
+
+  .enquiry-terminal-page .back-button {
+    padding: 10px 18px;
     font-size: 12px;
+    margin-bottom: 15px;
+  }
+
+  .terminal-tag-box {
+    padding: 6px 14px;
+    margin-bottom: 15px;
+  }
+
+  .terminal-title h2 {
+    font-size: 28px;
+  }
+
+  .section-title {
+    font-size: 22px;
+  }
+
+  .terminal-subtitle {
+    font-size: 15px;
+  }
+
+  .terminal-description {
+    font-size: 13px;
+  }
+
+  .service-card-content h3 {
+    font-size: 18px;
+  }
+
+  .terminal-form-section {
+    padding: 20px 15px;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    padding: 10px 12px;
+    font-size: 12px;
+  }
+}
+
+/* Small Mobile Phones (480px - 599px) */
+@media (max-width: 480px) {
+  .enquiry-terminal-page {
+    padding: 15px 10px;
+  }
+
+  .enquiry-terminal-page .back-button {
+    font-size: 11px;
+    padding: 8px 14px;
+    margin-bottom: 12px;
+  }
+
+  .terminal-tag-box {
+    padding: 5px 12px;
+    margin-bottom: 12px;
+  }
+
+  .terminal-tag {
+    font-size: 9px;
+    letter-spacing: 1px;
+  }
+
+  .terminal-title h2 {
+    font-size: 24px;
+    letter-spacing: 1.5px;
+  }
+
+  .section-title {
+    font-size: 20px;
+    letter-spacing: 1.5px;
+  }
+
+  .terminal-subtitle {
+    font-size: 14px;
+    margin: 12px 0 6px 0;
+  }
+
+  .terminal-description {
+    font-size: 12px;
+    line-height: 1.5;
+    margin: 10px 0 0 0;
+  }
+
+  .service-info-card {
+    padding: 16px;
+    margin-bottom: 20px;
+  }
+
+  .service-card-content h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  .service-card-content p {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+  .terminal-form-section {
+    padding: 18px 12px;
+  }
+
+  .terminal-form {
+    gap: 20px;
+  }
+
+  .form-group {
+    gap: 8px;
+  }
+
+  .form-group label {
+    font-size: 11px;
+    letter-spacing: 0.5px;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    padding: 10px 12px;
+    font-size: 12px;
+  }
+
+  .form-group select {
+    background-size: 16px;
+    padding-right: 32px;
+  }
+
+  .submit-button {
+    padding: 12px 20px;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    margin-top: 10px;
+  }
+
+  .security-notice {
+    margin-top: 25px;
+    padding: 12px 16px;
+    gap: 10px;
+  }
+
+  .notice-badge {
+    font-size: 18px;
+  }
+
+  .security-notice p {
+    font-size: 11px;
+    line-height: 1.4;
+  }
+
+  .not-found {
+    padding: 30px 12px;
+  }
+
+  .not-found h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+
+  .not-found button {
+    padding: 10px 20px;
+    font-size: 12px;
+  }
+}
+
+/* Extra Small Devices (375px - 479px) */
+@media (max-width: 375px) {
+  .enquiry-terminal-page {
+    padding: 12px 8px;
+  }
+
+  .enquiry-terminal-page .back-button {
+    padding: 7px 12px;
+    font-size: 10px;
+  }
+
+  .terminal-title h2 {
+    font-size: 20px;
+  }
+
+  .section-title {
+    font-size: 18px;
+  }
+
+  .terminal-subtitle {
+    font-size: 13px;
+  }
+
+  .service-info-card {
+    padding: 14px;
+  }
+
+  .service-card-content h3 {
+    font-size: 15px;
+  }
+
+  .terminal-form-section {
+    padding: 15px 10px;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    padding: 8px 10px;
+    font-size: 11px;
+  }
+
+  .submit-button {
+    padding: 10px 16px;
+    font-size: 10px;
+  }
+
+  .security-notice {
+    padding: 10px 12px;
+  }
+
+  .notice-badge {
+    font-size: 16px;
+  }
+
+  .security-notice p {
+    font-size: 10px;
+  }
+}
+
+/* Ultra Small Devices (320px and below) */
+@media (max-width: 320px) {
+  .terminal-title h2 {
+    font-size: 18px;
+  }
+
+  .section-title {
+    font-size: 16px;
+  }
+
+  .terminal-subtitle {
+    font-size: 12px;
+  }
+
+  .terminal-description {
+    font-size: 11px;
+  }
+
+  .service-card-content h3 {
+    font-size: 14px;
+  }
+
+  .service-card-content p {
+    font-size: 11px;
+  }
+
+  .form-group label {
+    font-size: 10px;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    padding: 7px 8px;
+    font-size: 10px;
+  }
+
+  .submit-button {
+    padding: 8px 12px;
+    font-size: 9px;
+  }
+
+  .not-found h1 {
+    font-size: 24px;
+  }
+}
+
+/* Extra Large Screens (1400px and above) */
+@media (min-width: 1400px) {
+  .enquiry-terminal-page {
+    padding: 50px 30px;
+  }
+
+  .enquiry-terminal-container {
+    max-width: 1100px;
+  }
+
+  .terminal-title h2 {
+    font-size: 56px;
+    letter-spacing: 4px;
+  }
+
+  .section-title {
+    font-size: 42px;
+  }
+
+  .terminal-subtitle {
+    font-size: 20px;
+  }
+
+  .terminal-description {
+    font-size: 18px;
+  }
+
+  .service-info-card {
+    padding: 35px;
+  }
+
+  .service-card-content h3 {
+    font-size: 28px;
+  }
+
+  .service-card-content p {
+    font-size: 16px;
+  }
+
+  .terminal-form-section {
+    padding: 35px;
+  }
+
+  .form-group label {
+    font-size: 14px;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    padding: 16px 18px;
+    font-size: 15px;
+  }
+
+  .submit-button {
+    padding: 18px 48px;
+    font-size: 16px;
+  }
+
+  .security-notice p {
+    font-size: 15px;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .enquiry-terminal-page {
+    background: white;
+    color: black;
+    padding: 20px;
+  }
+
+  .enquiry-terminal-page .back-button,
+  .submit-button,
+  .security-notice {
+    display: none;
+  }
+
+  .service-info-card,
+  .terminal-form-section {
+    border: 1px solid #ccc;
+    background: white;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    border: 1px solid #ccc;
+    background: white;
+    color: black;
+  }
+
+  .terminal-title h2,
+  .section-title {
+    color: #333;
+  }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .enquiry-terminal-page .back-button:hover,
+  .submit-button:hover:not(:disabled) {
+    transform: none;
+  }
+
+  .not-found button:hover {
+    transform: none;
+  }
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+  .terminal-tag-box,
+  .service-info-card,
+  .terminal-form-section {
+    border: 2px solid #dc2626;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    border: 2px solid #dc2626;
+  }
+
+  .submit-button {
+    background: #dc2626;
+    border: 2px solid #ffffff;
+  }
+
+  .security-notice {
+    border: 2px solid #dc2626;
   }
 }

@@ -20,7 +20,7 @@
 
 .join-page .section-tag {
   display: inline-block;
-  font-family: 'Courier New', monospace;
+  font-family: "Courier New", monospace;
   font-size: 0.9rem;
   color: #dc2626;
   background: rgba(220, 38, 38, 0.1);
@@ -32,7 +32,7 @@
 }
 
 .join-page .section-title {
-  font-family: 'Orbitron', monospace;
+  font-family: "Orbitron", monospace;
   font-size: 2.5rem;
   font-weight: 700;
   color: #e5e5e5;
@@ -124,7 +124,7 @@
   color: white;
   text-decoration: none;
   font-weight: 600;
-  font-family: 'Rajdhani', sans-serif;
+  font-family: "Rajdhani", sans-serif;
   letter-spacing: 1px;
   border-radius: 4px;
   transition: all 0.3s ease;
@@ -142,7 +142,7 @@
   color: #9ca3af;
   max-width: 600px;
   font-size: 1.1rem;
-  font-family: 'Rajdhani', sans-serif;
+  font-family: "Rajdhani", sans-serif;
 }
 
 /* ================= SPEAKER FORM ================= */
@@ -151,7 +151,9 @@
   padding: 2rem;
   background: #111111;
   color: #e5e5e5;
-  font-family: 'Rajdhani', sans-serif;
+  font-family: "Rajdhani", sans-serif;
+  position: relative;
+  min-height: 100vh;
 }
 
 .speaker-form {
@@ -184,7 +186,7 @@
   border-radius: 4px;
   background: #1a1a1a;
   color: #e5e5e5;
-  font-family: 'Rajdhani', sans-serif;
+  font-family: "Rajdhani", sans-serif;
   box-shadow: inset 0 0 5px rgba(220, 38, 38, 0.5);
 }
 
@@ -211,7 +213,9 @@
   font-size: 1rem;
   font-weight: bold;
   text-transform: uppercase;
-  transition: background 0.3s ease, transform 0.2s ease;
+  transition:
+    background 0.3s ease,
+    transform 0.2s ease;
 }
 
 .speaker-form button.submit-btn:hover {
@@ -236,7 +240,9 @@
 
 .speaker-form input[type="checkbox"],
 .speaker-form input[type="radio"] {
+  width: auto;
   margin-right: 0.5rem;
+  display: inline-block;
 }
 
 .speaker-form label input {
@@ -250,7 +256,7 @@
 }
 
 .speaker-form .section-title {
-  font-family: 'JetBrains Mono', 'Courier New', monospace;
+  font-family: "JetBrains Mono", "Courier New", monospace;
   font-size: 2.5rem;
   font-weight: 700;
   color: #ffffff;
@@ -274,6 +280,7 @@
   line-height: 1.7;
   margin-bottom: 2rem;
   text-align: center;
+  max-width: 100%;
 }
 
 /* ================= QUERY TERMINAL ================= */
@@ -285,7 +292,7 @@
   padding: 1.5rem;
   text-align: center;
   color: #e5e5e5;
-  font-family: 'Rajdhani', sans-serif;
+  font-family: "Rajdhani", sans-serif;
   cursor: pointer;
   transition: all 0.3s ease;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
@@ -310,6 +317,7 @@
   position: absolute;
   top: 20px;
   left: 20px;
+  z-index: 10;
 }
 
 .back-to-joinus {
@@ -347,7 +355,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.9);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -375,6 +383,7 @@
   font-size: 2rem;
   cursor: pointer;
   font-weight: bold;
+  transition: color 0.3s ease;
 }
 
 .modal-close:hover {
@@ -383,7 +392,7 @@
 
 .modal-title {
   color: #dc2626;
-  font-family: 'Orbitron', monospace;
+  font-family: "Orbitron", monospace;
   font-size: 1.5rem;
   margin-bottom: 1.5rem;
   text-align: center;
@@ -391,7 +400,7 @@
 
 /* ================= RESPONSIVE DESIGN ================= */
 
-/* Tablet and smaller desktops */
+/* Large Desktops (1200px - 1399px) */
 @media (max-width: 1200px) {
   .join-page .unified-section {
     padding: 2.5rem 1.5rem;
@@ -412,9 +421,34 @@
     max-width: 500px;
     font-size: 1rem;
   }
+
+  .speaker-form {
+    max-width: 700px;
+    padding: 1.8rem;
+  }
+
+  .speaker-form .section-title {
+    font-size: 2rem;
+  }
 }
 
-/* Mobile landscape and portrait */
+/* Tablets (768px - 1199px) */
+@media (max-width: 992px) {
+  .join-page .section-title {
+    font-size: 2rem;
+    gap: 1.5rem;
+  }
+
+  .join-page .title-line {
+    min-width: 40px;
+  }
+
+  .speaker-form {
+    margin: 0 1rem;
+  }
+}
+
+/* Mobile Landscape (600px - 767px) */
 @media (max-width: 768px) {
   .join-page .unified-section {
     padding: 2rem 1rem;
@@ -494,6 +528,7 @@
     font-size: 0.9rem;
   }
 
+  /* Modal responsive */
   .modal-content {
     padding: 1.5rem;
     max-width: 90%;
@@ -501,6 +536,11 @@
 
   .modal-title {
     font-size: 1.2rem;
+  }
+
+  /* Speaker Form responsive */
+  .form-page {
+    padding: 1rem;
   }
 
   .speaker-form {
@@ -512,7 +552,8 @@
   }
 
   .speaker-form input,
-  .speaker-form textarea {
+  .speaker-form textarea,
+  .speaker-form select {
     padding: 0.6rem;
     font-size: 0.9rem;
   }
@@ -521,12 +562,44 @@
     padding: 0.6rem 1.2rem;
     font-size: 0.9rem;
   }
+
+  .speaker-form .section-title {
+    font-size: 1.8rem;
+  }
+
+  .speaker-form .section-tag {
+    font-size: 0.85rem;
+  }
+
+  .speaker-form .join-intro {
+    font-size: 0.95rem;
+  }
+
+  .speaker-form fieldset {
+    padding: 0.8rem;
+  }
+
+  .speaker-form legend {
+    font-size: 1rem;
+  }
+
+  /* Back button responsive */
+  .back-button-container {
+    position: static;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  .back-to-joinus {
+    display: inline-flex;
+    margin: 0 auto;
+  }
 }
 
-/* Small mobile */
-@media (max-width: 480px) {
+/* Small Mobile (480px - 599px) */
+@media (max-width: 600px) {
   .join-page .unified-section {
-    padding: 1.5rem 0.8rem;
+    padding: 1.8rem 0.8rem;
   }
 
   .join-page .section-header {
@@ -540,9 +613,70 @@
   }
 
   .join-page .section-title {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     letter-spacing: 1.5px;
     gap: 0.8rem;
+  }
+
+  .join-page .title-line {
+    min-width: 25px;
+  }
+
+  .join-intro {
+    font-size: 0.9rem;
+    margin-top: 10px;
+  }
+
+  .join-grid {
+    gap: 14px;
+    margin-top: 24px;
+  }
+
+  .eligibility-grid {
+    gap: 14px;
+    margin-top: 24px;
+  }
+
+  .join-card,
+  .eligibility-card {
+    padding: 16px;
+  }
+
+  .join-card h3,
+  .eligibility-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+  }
+
+  .join-card ul,
+  .eligibility-card ul {
+    padding-left: 14px;
+    margin: 12px 0;
+  }
+
+  .join-card li,
+  .eligibility-card li {
+    font-size: 0.85rem;
+    margin-bottom: 5px;
+    line-height: 1.5;
+  }
+
+  .join-btn {
+    padding: 8px 16px;
+    font-size: 0.85rem;
+  }
+}
+
+/* Small Mobile Phones (320px - 479px) */
+@media (max-width: 480px) {
+  .join-page .unified-section {
+    padding: 1.5rem 0.8rem;
+  }
+
+  .join-page .section-title {
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+    gap: 0.5rem;
   }
 
   .join-page .title-line {
@@ -551,17 +685,16 @@
 
   .join-intro {
     font-size: 0.85rem;
-    margin-top: 10px;
   }
 
   .join-grid {
     gap: 12px;
-    margin-top: 24px;
+    margin-top: 20px;
   }
 
   .eligibility-grid {
     gap: 12px;
-    margin-top: 24px;
+    margin-top: 20px;
   }
 
   .join-card,
@@ -578,12 +711,12 @@
   .join-card ul,
   .eligibility-card ul {
     padding-left: 14px;
-    margin: 12px 0;
+    margin: 10px 0;
   }
 
   .join-card li,
   .eligibility-card li {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     margin-bottom: 5px;
     line-height: 1.5;
   }
@@ -608,6 +741,7 @@
     line-height: 1.5;
   }
 
+  /* Modal responsive */
   .modal-content {
     padding: 1rem;
     width: 95%;
@@ -624,6 +758,11 @@
     margin-bottom: 1rem;
   }
 
+  /* Speaker Form responsive */
+  .form-page {
+    padding: 0.8rem;
+  }
+
   .speaker-form {
     padding: 1rem;
   }
@@ -634,7 +773,8 @@
   }
 
   .speaker-form input,
-  .speaker-form textarea {
+  .speaker-form textarea,
+  .speaker-form select {
     padding: 0.5rem;
     margin-bottom: 1rem;
     font-size: 0.85rem;
@@ -649,9 +789,79 @@
     font-size: 0.85rem;
     width: 100%;
   }
+
+  .speaker-form .section-title {
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+  }
+
+  .speaker-form .section-tag {
+    font-size: 0.75rem;
+  }
+
+  .speaker-form .join-intro {
+    font-size: 0.85rem;
+    line-height: 1.6;
+  }
+
+  .speaker-form fieldset {
+    padding: 0.6rem;
+  }
+
+  .speaker-form legend {
+    font-size: 0.9rem;
+  }
+
+  /* Back button responsive */
+  .back-to-joinus {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.85rem;
+  }
 }
 
-/* Extra large screens */
+/* Ultra Small Devices (320px and below) */
+@media (max-width: 320px) {
+  .join-page .section-title {
+    font-size: 1.2rem;
+  }
+
+  .join-page .title-line {
+    min-width: 15px;
+  }
+
+  .join-intro {
+    font-size: 0.8rem;
+  }
+
+  .join-card h3,
+  .eligibility-card h3 {
+    font-size: 0.95rem;
+  }
+
+  .join-card li,
+  .eligibility-card li {
+    font-size: 0.75rem;
+  }
+
+  .join-btn {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+  }
+
+  .speaker-form .section-title {
+    font-size: 1.3rem;
+  }
+
+  .speaker-form .section-tag {
+    font-size: 0.7rem;
+  }
+
+  .speaker-form .join-intro {
+    font-size: 0.8rem;
+  }
+}
+
+/* Extra Large Screens (1400px and above) */
 @media (min-width: 1400px) {
   .join-page .unified-section {
     padding: 4rem 2rem;
@@ -671,5 +881,104 @@
   .join-card,
   .eligibility-card {
     padding: 30px;
+  }
+
+  .join-card h3,
+  .eligibility-card h3 {
+    font-size: 1.4rem;
+  }
+
+  .join-card li,
+  .eligibility-card li {
+    font-size: 1rem;
+  }
+
+  .join-intro {
+    font-size: 1.2rem;
+    max-width: 700px;
+  }
+
+  .speaker-form {
+    max-width: 900px;
+    padding: 2.5rem;
+  }
+
+  .speaker-form .section-title {
+    font-size: 3rem;
+  }
+
+  .speaker-form .join-intro {
+    font-size: 1.2rem;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .join-page {
+    background: white;
+    color: black;
+  }
+
+  .join-page .unified-section {
+    padding: 1rem;
+  }
+
+  .join-card,
+  .eligibility-card {
+    break-inside: avoid;
+    page-break-inside: avoid;
+    border: 1px solid #ccc;
+    box-shadow: none;
+  }
+
+  .join-card:hover,
+  .eligibility-card:hover {
+    transform: none;
+    box-shadow: none;
+  }
+
+  .join-btn,
+  .query-terminal,
+  .modal-overlay,
+  .back-button-container {
+    display: none;
+  }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .join-card:hover,
+  .eligibility-card:hover,
+  .query-terminal:hover,
+  .join-btn:hover,
+  .back-to-joinus:hover {
+    transform: none;
+  }
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+  .join-card,
+  .eligibility-card {
+    border: 2px solid #dc2626;
+  }
+
+  .join-btn {
+    background: #dc2626;
+    border: 2px solid #ffffff;
+  }
+
+  .speaker-form input,
+  .speaker-form textarea,
+  .speaker-form select {
+    border: 2px solid #dc2626;
   }
 }

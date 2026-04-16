@@ -5,7 +5,8 @@
   font-family: "Inter", sans-serif;
 }
 
-html, body {
+html,
+body {
   height: 100%;
 }
 
@@ -53,7 +54,7 @@ body {
   width: 100%;
   height: 100%;
   -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
   filter: drop-shadow(0 0 12px rgba(255, 30, 30, 0.55));
 }
 .osd-header .brand h1 {
@@ -253,31 +254,255 @@ body {
   color: #bbb;
 }
 
-/* MOBILE */
+/* ========== RESPONSIVE STYLES ========== */
+
+/* Large Tablets and Small Desktops (1024px and below) */
+@media (max-width: 1024px) {
+  .badge-img {
+    width: 240px;
+  }
+
+  .verify-wrapper {
+    padding: 20px;
+  }
+}
+
+/* Tablets (768px and below) */
 @media (max-width: 768px) {
+  body {
+    margin-top: 10px;
+  }
+
+  /* Header responsive */
+  .osd-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+    padding: 15px;
+  }
+
+  .osd-header .logo {
+    width: 60px;
+    height: 60px;
+  }
+
+  .osd-header .brand h1 {
+    font-size: 18px;
+    letter-spacing: 2px;
+  }
+
+  .osd-header .brand p {
+    font-size: 10px;
+  }
+
+  /* Menu responsive */
+  .event-menu h2 {
+    font-size: 18px;
+  }
+
+  .event-menu .event-grid {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 12px;
+  }
+
+  .event-menu .event-btn {
+    padding: 12px 16px;
+    font-size: 13px;
+  }
+
+  /* Form responsive */
+  .verify-wrapper .verify-form {
+    flex-direction: column;
+  }
+
+  .verify-wrapper .verify-form button {
+    width: 100%;
+  }
+
+  .verify-wrapper h3 {
+    font-size: 18px;
+  }
+
+  .badge-img {
+    width: 200px;
+  }
+
+  /* Footer responsive */
   .footer-container {
     flex-direction: column;
     text-align: center;
     align-items: center;
   }
+
   .footer-left,
   .footer-right {
     width: 100%;
   }
+
+  .footer-left .footer-underline {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .social-icons {
     justify-content: center;
   }
+
   .contact-row {
     flex-direction: column;
     gap: 20px;
     align-items: center;
   }
+
   .contact-item {
     width: 100%;
     justify-content: center;
     text-align: center;
   }
+
   .contact-item div {
     text-align: center;
   }
-}/*# sourceMappingURL=style.css.map */
+}
+
+/* Mobile Landscape (600px and below) */
+@media (max-width: 600px) {
+  .event-menu .event-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .verify-wrapper {
+    padding: 15px;
+    margin-bottom: 20px;
+  }
+
+  .verify-wrapper .subtitle {
+    font-size: 12px;
+  }
+
+  .results .valid,
+  .results .invalid {
+    padding: 12px;
+    font-size: 12px;
+  }
+
+  .badge-img {
+    width: 180px;
+  }
+}
+
+/* Mobile Phones (480px and below) */
+@media (max-width: 480px) {
+  .osd-header {
+    padding: 12px;
+    margin-bottom: 20px;
+  }
+
+  .osd-header .logo {
+    width: 50px;
+    height: 50px;
+  }
+
+  .osd-header .brand h1 {
+    font-size: 16px;
+    letter-spacing: 1px;
+  }
+
+  .event-menu {
+    margin-bottom: 25px;
+  }
+
+  .event-menu h2 {
+    font-size: 16px;
+  }
+
+  .event-menu .event-btn {
+    padding: 10px 14px;
+    font-size: 12px;
+  }
+
+  .verify-wrapper h3 {
+    font-size: 16px;
+  }
+
+  .verify-wrapper .verify-form input {
+    padding: 10px;
+    font-size: 13px;
+  }
+
+  .verify-wrapper .verify-form button {
+    padding: 10px 16px;
+  }
+
+  .badge-img {
+    width: 150px;
+  }
+
+  .osd-footer {
+    padding: 12px 8px 5px;
+  }
+
+  .osd-footer .footer-left h3,
+  .osd-footer .footer-right h3 {
+    font-size: 13px;
+  }
+
+  .osd-footer .footer-right .contact-item span,
+  .osd-footer .footer-right .contact-item p {
+    font-size: 11px;
+  }
+
+  .osd-footer .footer-bottom {
+    font-size: 10px;
+  }
+}
+
+/* Small Mobile Phones (375px and below) */
+@media (max-width: 375px) {
+  .badge-img {
+    width: 130px;
+  }
+
+  .verify-wrapper {
+    padding: 12px;
+  }
+
+  .results .valid,
+  .results .invalid {
+    padding: 10px;
+    font-size: 11px;
+  }
+
+  .details {
+    font-size: 11px;
+  }
+}
+
+/* Extra Small Devices (320px and below) */
+@media (max-width: 320px) {
+  .osd-header .brand h1 {
+    font-size: 14px;
+  }
+
+  .event-menu h2 {
+    font-size: 14px;
+  }
+
+  .badge-img {
+    width: 120px;
+  }
+}
+
+/* Print Styles (Optional) */
+@media print {
+  body {
+    background: white;
+    color: black;
+  }
+
+  .osd-footer,
+  .event-menu button {
+    display: none;
+  }
+}
