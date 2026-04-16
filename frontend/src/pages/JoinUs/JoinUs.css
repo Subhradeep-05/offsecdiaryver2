@@ -1,0 +1,675 @@
+/* ================= PAGE BACKGROUND - Uniform grey ================= */
+
+.join-page {
+  background: #111111;
+  color: #ddd;
+  min-height: 100vh;
+}
+
+/* Section Container - shared with Home page */
+.join-page .unified-section {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+}
+
+.join-page .section-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.join-page .section-tag {
+  display: inline-block;
+  font-family: 'Courier New', monospace;
+  font-size: 0.9rem;
+  color: #dc2626;
+  background: rgba(220, 38, 38, 0.1);
+  padding: 0.5rem 1.5rem;
+  border: 1px solid #dc2626;
+  border-radius: 4px;
+  margin-bottom: 1.5rem;
+  letter-spacing: 2px;
+}
+
+.join-page .section-title {
+  font-family: 'Orbitron', monospace;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #e5e5e5;
+  letter-spacing: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.join-page .title-line {
+  flex: 0.2;
+  height: 2px;
+  background: linear-gradient(to right, transparent, #dc2626, transparent);
+  min-width: 50px;
+}
+
+/* ================= GRID LAYOUT ================= */
+
+.join-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin-top: 40px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.eligibility-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+  margin-top: 40px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ================= CARDS ================= */
+
+.join-card,
+.eligibility-card {
+  background: #1a1a1a;
+  border: 1px solid #2a2a2a;
+  padding: 26px;
+  transition: 0.3s;
+  border-left: 3px solid transparent;
+}
+
+.join-card:hover,
+.eligibility-card:hover {
+  border-left-color: #dc2626;
+  box-shadow: 0 0 20px rgba(220, 38, 38, 0.3);
+  transform: translateY(-5px);
+}
+
+.join-card h3,
+.eligibility-card h3 {
+  color: #dc2626;
+  margin-bottom: 12px;
+}
+
+/* ================= LIST ================= */
+
+.join-card ul,
+.eligibility-card ul {
+  margin: 16px 0;
+  padding-left: 18px;
+}
+
+.join-card li,
+.eligibility-card li {
+  margin-bottom: 8px;
+  color: #9ca3af;
+  line-height: 1.6;
+}
+
+/* ================= BUTTON ================= */
+
+.join-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 16px;
+  padding: 12px 24px;
+  background: #dc2626;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-family: 'Rajdhani', sans-serif;
+  letter-spacing: 1px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.join-btn:hover {
+  background: #991b1b;
+  box-shadow: 0 4px 15px rgba(220, 38, 38, 0.4);
+}
+
+/* ================= HEADER INTRO ================= */
+
+.join-intro {
+  margin-top: 16px;
+  color: #9ca3af;
+  max-width: 600px;
+  font-size: 1.1rem;
+  font-family: 'Rajdhani', sans-serif;
+}
+
+/* ================= SPEAKER FORM ================= */
+
+.form-page {
+  padding: 2rem;
+  background: #111111;
+  color: #e5e5e5;
+  font-family: 'Rajdhani', sans-serif;
+}
+
+.speaker-form {
+  max-width: 800px;
+  margin: 0 auto;
+  background: rgba(26, 26, 26, 0.8);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 0, 0, 0.4);
+}
+
+.speaker-form label {
+  display: block;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: #e5e5e5;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.speaker-form input,
+.speaker-form textarea,
+.speaker-form select {
+  width: 100%;
+  padding: 0.8rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid #dc2626;
+  border-radius: 4px;
+  background: #1a1a1a;
+  color: #e5e5e5;
+  font-family: 'Rajdhani', sans-serif;
+  box-shadow: inset 0 0 5px rgba(220, 38, 38, 0.5);
+}
+
+.speaker-form input:focus,
+.speaker-form textarea:focus,
+.speaker-form select:focus {
+  outline: none;
+  border-color: #ff4444;
+  box-shadow: 0 0 8px rgba(255, 68, 68, 0.8);
+}
+
+.speaker-form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.speaker-form button.submit-btn {
+  background: #dc2626;
+  color: #ffffff;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.speaker-form button.submit-btn:hover {
+  background: #991b1b;
+  transform: translateY(-2px);
+}
+
+.speaker-form fieldset {
+  border: 1px solid rgba(255, 0, 0, 0.4);
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.speaker-form legend {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #dc2626;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.speaker-form input[type="checkbox"],
+.speaker-form input[type="radio"] {
+  margin-right: 0.5rem;
+}
+
+.speaker-form label input {
+  display: inline-block;
+  margin-right: 0.5rem;
+}
+
+.speaker-form .section-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.speaker-form .section-title {
+  font-family: 'JetBrains Mono', 'Courier New', monospace;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 3px;
+  text-shadow: 0 0 10px rgba(220, 38, 38, 0.3);
+  margin-bottom: 1rem;
+}
+
+.speaker-form .section-tag {
+  color: #dc2626;
+  font-size: 1rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.speaker-form .join-intro {
+  color: #b8bcc5;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+/* ================= QUERY TERMINAL ================= */
+
+.query-terminal {
+  background: rgba(26, 26, 26, 0.8);
+  border: 1px solid rgba(255, 0, 0, 0.4);
+  border-radius: 8px;
+  padding: 1.5rem;
+  text-align: center;
+  color: #e5e5e5;
+  font-family: 'Rajdhani', sans-serif;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.query-terminal:hover {
+  border-color: #dc2626;
+  box-shadow: 0 8px 30px rgba(255, 0, 0, 0.3);
+  transform: translateY(-5px);
+}
+
+.query-terminal h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #dc2626;
+  margin-bottom: 0.5rem;
+}
+
+/* ================= BACK TO JOIN US BUTTON ================= */
+
+.back-button-container {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.back-to-joinus {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #dc2626;
+  background: transparent;
+  border: 2px solid #dc2626;
+  border-radius: 4px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.back-to-joinus:hover {
+  background: #dc2626;
+  color: #ffffff;
+  box-shadow: 0 4px 20px rgba(220, 38, 38, 0.3);
+  transform: translateY(-2px);
+}
+
+.back-to-joinus span {
+  margin-right: 0.5rem;
+}
+
+/* ================= MODAL ================= */
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: #1a1a1a;
+  border: 1px solid #dc2626;
+  border-radius: 8px;
+  padding: 2rem;
+  max-width: 500px;
+  width: 90%;
+  position: relative;
+  box-shadow: 0 4px 20px rgba(220, 38, 38, 0.3);
+}
+
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: none;
+  border: none;
+  color: #dc2626;
+  font-size: 2rem;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.modal-close:hover {
+  color: #ff4444;
+}
+
+.modal-title {
+  color: #dc2626;
+  font-family: 'Orbitron', monospace;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* ================= RESPONSIVE DESIGN ================= */
+
+/* Tablet and smaller desktops */
+@media (max-width: 1200px) {
+  .join-page .unified-section {
+    padding: 2.5rem 1.5rem;
+  }
+
+  .join-grid,
+  .eligibility-grid {
+    max-width: 100%;
+    gap: 20px;
+  }
+
+  .join-card,
+  .eligibility-card {
+    padding: 22px;
+  }
+
+  .join-intro {
+    max-width: 500px;
+    font-size: 1rem;
+  }
+}
+
+/* Mobile landscape and portrait */
+@media (max-width: 768px) {
+  .join-page .unified-section {
+    padding: 2rem 1rem;
+  }
+
+  .join-page .section-header {
+    margin-bottom: 2rem;
+  }
+
+  .join-page .section-tag {
+    font-size: 0.8rem;
+    padding: 0.4rem 1rem;
+    margin-bottom: 1rem;
+    letter-spacing: 1.5px;
+  }
+
+  .join-page .section-title {
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+    gap: 1rem;
+  }
+
+  .join-page .title-line {
+    min-width: 30px;
+    height: 1px;
+  }
+
+  .join-intro {
+    max-width: 100%;
+    font-size: 0.95rem;
+    margin-top: 12px;
+  }
+
+  .join-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-top: 30px;
+  }
+
+  .eligibility-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-top: 30px;
+  }
+
+  .join-card,
+  .eligibility-card {
+    padding: 18px;
+  }
+
+  .join-card h3,
+  .eligibility-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+
+  .join-card li,
+  .eligibility-card li {
+    font-size: 0.9rem;
+    margin-bottom: 6px;
+  }
+
+  .join-btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+
+  .query-terminal {
+    padding: 1.2rem;
+  }
+
+  .query-terminal h3 {
+    font-size: 1.2rem;
+  }
+
+  .query-terminal p {
+    font-size: 0.9rem;
+  }
+
+  .modal-content {
+    padding: 1.5rem;
+    max-width: 90%;
+  }
+
+  .modal-title {
+    font-size: 1.2rem;
+  }
+
+  .speaker-form {
+    padding: 1.5rem;
+  }
+
+  .speaker-form label {
+    font-size: 0.9rem;
+  }
+
+  .speaker-form input,
+  .speaker-form textarea {
+    padding: 0.6rem;
+    font-size: 0.9rem;
+  }
+
+  .speaker-form button.submit-btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+  .join-page .unified-section {
+    padding: 1.5rem 0.8rem;
+  }
+
+  .join-page .section-header {
+    margin-bottom: 1.5rem;
+  }
+
+  .join-page .section-tag {
+    font-size: 0.7rem;
+    padding: 0.3rem 0.8rem;
+    letter-spacing: 1px;
+  }
+
+  .join-page .section-title {
+    font-size: 1.4rem;
+    letter-spacing: 1.5px;
+    gap: 0.8rem;
+  }
+
+  .join-page .title-line {
+    min-width: 20px;
+  }
+
+  .join-intro {
+    font-size: 0.85rem;
+    margin-top: 10px;
+  }
+
+  .join-grid {
+    gap: 12px;
+    margin-top: 24px;
+  }
+
+  .eligibility-grid {
+    gap: 12px;
+    margin-top: 24px;
+  }
+
+  .join-card,
+  .eligibility-card {
+    padding: 14px;
+  }
+
+  .join-card h3,
+  .eligibility-card h3 {
+    font-size: 1rem;
+    margin-bottom: 8px;
+  }
+
+  .join-card ul,
+  .eligibility-card ul {
+    padding-left: 14px;
+    margin: 12px 0;
+  }
+
+  .join-card li,
+  .eligibility-card li {
+    font-size: 0.85rem;
+    margin-bottom: 5px;
+    line-height: 1.5;
+  }
+
+  .join-btn {
+    padding: 8px 16px;
+    font-size: 0.85rem;
+    width: 100%;
+  }
+
+  .query-terminal {
+    padding: 1rem;
+  }
+
+  .query-terminal h3 {
+    font-size: 1rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .query-terminal p {
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+
+  .modal-content {
+    padding: 1rem;
+    width: 95%;
+  }
+
+  .modal-close {
+    font-size: 1.5rem;
+    top: 8px;
+    right: 10px;
+  }
+
+  .modal-title {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .speaker-form {
+    padding: 1rem;
+  }
+
+  .speaker-form label {
+    font-size: 0.85rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .speaker-form input,
+  .speaker-form textarea {
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    font-size: 0.85rem;
+  }
+
+  .speaker-form textarea {
+    min-height: 100px;
+  }
+
+  .speaker-form button.submit-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+    width: 100%;
+  }
+}
+
+/* Extra large screens */
+@media (min-width: 1400px) {
+  .join-page .unified-section {
+    padding: 4rem 2rem;
+    max-width: 1600px;
+  }
+
+  .join-page .section-title {
+    font-size: 3rem;
+  }
+
+  .join-grid,
+  .eligibility-grid {
+    max-width: 1400px;
+    gap: 28px;
+  }
+
+  .join-card,
+  .eligibility-card {
+    padding: 30px;
+  }
+}

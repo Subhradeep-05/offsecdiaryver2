@@ -1,0 +1,330 @@
+{
+  "certifications": [
+    {
+      "id": "redvector",
+      "title": "RedVector",
+      "fullName": "RedVector Masterclass (Advanced Certified Offensive Security Program)",
+      "category": "Offensive Security",
+      "level": "Intermediate",
+      "duration": "1–2 Months",
+      "mode": "Online (Live, Mentor-Led)",
+      "price": "₹2,000",
+      "certification": "Yes",
+      "about": "RedVector is an intensive offensive security program focused on real-world attack techniques, red team mindset, and practical exploitation skills.",
+      "highlights": [
+        "Real-world offensive security training",
+        "Mentor-led sessions",
+        "CTF-style challenges",
+        "Red team methodology",
+        "Hands-on exploitation practice"
+      ],
+      "modules": [
+        "OSINT Fundamentals",
+        "Red Team Basics",
+        "Networking",
+        "CTF Fundamentals"
+      ],
+      "tools": [
+        "Nmap",
+        "Burp Suite",
+        "Metasploit",
+        "Wireshark",
+        "OSINT tools"
+      ]
+    },
+    {
+      "id": "carla",
+      "title": "CARLA",
+      "fullName": "Certified AI Red Teaming & LLM Security Analyst",
+      "category": "AI Security",
+      "level": "Advanced",
+      "duration": "2 Months",
+      "mode": "Online | Live | Mentor-Led",
+      "price": "₹5,000",
+      "certification": "Yes (OffSecDiary)",
+      "about": "CARLA is a mentor-led certification program focused on identifying, exploiting, and securing vulnerabilities in AI systems, especially Large Language Models (LLMs). It follows a break → analyze → secure methodology covering prompt injection, jailbreaks, data leakage, and unsafe integrations.",
+      "highlights": [
+        "Real-world AI attack techniques (prompt injection, jailbreaks, data leakage)",
+        "Understanding of LLM internals (model vs application layer)",
+        "Adversarial thinking for AI security testing",
+        "AI architecture, trust boundaries, and attack surfaces",
+        "Offensive exploitation and defensive guardrail design",
+        "Mentor-led sessions with real-world scenarios"
+      ],
+      "modules": [
+        "LLM Foundations & AI System Internals",
+        "AI Architecture & Trust Boundaries",
+        "Prompt Injection & Jailbreak Techniques",
+        "Data Leakage & AI Abuse Scenarios",
+        "AI Red Teaming & Threat Modeling",
+        "Defensive Security, Guardrails & Reporting"
+      ],
+      "curriculum": [
+        "AI System Foundations",
+        "Offensive AI Exploitation",
+        "Structured Red Teaming",
+        "Professionalization (Guardrails, Reporting, Compliance)"
+      ],
+      "tools": [
+        "OpenAI testing environments",
+        "Postman",
+        "Burp Suite",
+        "Python",
+        "Browser DevTools"
+      ]
+    },
+    {
+      "id": "ocws",
+      "title": "OCWS",
+      "fullName": "OffSecDiary Certified Web Security Specialist",
+      "category": "Web Security",
+      "level": "Intermediate",
+      "duration": "3 Months",
+      "mode": "Live, Mentor-Led",
+      "price": "₹6,000",
+      "certification": "Yes",
+      "about": "OCWS is a structured certification focused on real-world web application security, vulnerability discovery, exploitation, and professional reporting aligned with AppSec roles.",
+      "highlights": [
+        "Real-world web security learning",
+        "OWASP Top 10 exploitation",
+        "API security and business logic flaws",
+        "Manual + tool-based testing",
+        "Professional reporting & remediation mindset"
+      ],
+      "modules": [
+        "Web Architecture & Networking",
+        "Reconnaissance & Attack Surface Mapping",
+        "Core Exploitation (SQLi, XSS)",
+        "Advanced Attacks (CSRF, SSRF)",
+        "API & Business Logic Security",
+        "VAPT Workflow & Reporting"
+      ],
+      "curriculum": [
+        "Foundations (HTTP, sessions)",
+        "Recon & Mapping",
+        "Core Exploitation",
+        "Advanced Attacks",
+        "API & Business Logic Security",
+        "Professional Workflow"
+      ]
+    },
+    {
+      "id": "ocdfs",
+      "title": "OCDFS",
+      "fullName": "OffSecDiary Certified Digital Forensics Specialist",
+      "category": "Forensics",
+      "level": "Intermediate",
+      "duration": "3 Months",
+      "mode": "Online | Live | Mentor-Led",
+      "price": "₹7,000",
+      "certification": "Yes (OffSecDiary)",
+      "about": "OCDFS is a mentor-led certification focused on mobile and digital investigations, covering evidence collection, artifact analysis, and forensic workflows across Android and iOS.",
+      "highlights": [
+        "Mobile device investigation workflows",
+        "Evidence collection, extraction, and preservation",
+        "Artifact and log analysis",
+        "Timeline reconstruction and activity tracking",
+        "Real-world forensic scenarios"
+      ],
+      "modules": [
+        "Digital & Mobile Forensics Fundamentals",
+        "Evidence Collection & Preservation",
+        "Android Forensics",
+        "iOS Forensics",
+        "Browser & System Analysis",
+        "Log Analysis & Timeline Reconstruction",
+        "Reporting & Investigation Workflow"
+      ],
+      "tools": [
+        "Hashing tools",
+        "SQLite tools",
+        "Hex editors",
+        "ADB (Android Debug Bridge)",
+        "Mobile forensic suites",
+        "iOS backup tools"
+      ]
+    },
+    {
+      "id": "ocds",
+      "title": "OCDS",
+      "fullName": "OffSecDiary Certified DevSecOps Specialist",
+      "category": "DevSecOps",
+      "level": "Advanced",
+      "duration": "4 Months",
+      "mode": "Online | Live",
+      "price": "₹12,000",
+      "certification": "Yes",
+      "about": "OCDS is a mentor-led DevSecOps certification focused on securing the entire DevOps lifecycle including CI/CD pipelines, cloud environments, and Kubernetes.",
+      "highlights": [
+        "CI/CD pipeline security",
+        "Container & Kubernetes security",
+        "Cloud-native environments",
+        "Security automation (SAST, DAST, SCA)",
+        "Threat modeling and secure design",
+        "Real-world pipeline attack scenarios"
+      ],
+      "modules": [
+        "DevOps Fundamentals & CI/CD Workflow",
+        "CI/CD Architecture & Pipeline Design",
+        "Threat Modeling & Secure System Design",
+        "CI/CD Security & Pipeline Hardening",
+        "Security-as-Code & Policy Enforcement",
+        "SAST & DAST",
+        "Supply Chain Security",
+        "Secrets Management & Identity Security",
+        "Container Security",
+        "Kubernetes & Cloud Security",
+        "Monitoring & Incident Response",
+        "Compliance & Governance"
+      ],
+      "curriculum": [
+        "Foundations & Secure Design",
+        "Pipeline Security & Testing",
+        "Advanced Security & Cloud",
+        "Monitoring, Compliance & Automation"
+      ]
+    },
+    {
+      "id": "ciseh",
+      "title": "CISEH",
+      "fullName": "Certified Information Security and Ethical Hacking",
+      "category": "Cybersecurity",
+      "level": "Beginner",
+      "duration": "1 Month",
+      "mode": "Online (Self-Paced)",
+      "price": "₹1,500",
+      "certification": "Yes",
+      "about": "CISEH is a foundational course in ethical hacking and cybersecurity, designed to provide hands-on experience in securing systems and networks.",
+      "highlights": [
+        "Comprehensive ethical hacking training",
+        "Self-paced learning",
+        "Hands-on labs",
+        "Industry-recognized certification"
+      ],
+      "modules": [
+        "Introduction to Cybersecurity",
+        "Network Security Basics",
+        "Web Application Security",
+        "Penetration Testing Fundamentals"
+      ],
+      "tools": [
+        "Kali Linux",
+        "Wireshark",
+        "Metasploit",
+        "Burp Suite"
+      ]
+    },
+    {
+      "id": 9,
+      "title": "OCMEF",
+      "fullName": "OffSecDiary Certified Malware Exploit Fundamentals",
+      "level": "Advanced",
+      "about": "A mentor-led program focused on low-level system understanding, malware fundamentals, and exploit development. It builds an attacker-first mindset by teaching how vulnerabilities are created and exploited at memory level.",
+      "highlights": [
+        "Low-level system & memory understanding",
+        "Exploit development fundamentals",
+        "Reverse engineering basics",
+        "Hands-on practical labs",
+        "Attacker-first mindset training"
+      ],
+      "modules": [
+        "Malware Fundamentals",
+        "Memory Internals & Architecture",
+        "Stack & Heap Exploitation",
+        "Reverse Engineering Basics",
+        "Mitigations (ASLR, DEP)"
+      ],
+      "tools": [
+        "GDB",
+        "x64dbg",
+        "IDA Free",
+        "C/C++",
+        "Assembly"
+      ],
+      "curriculum": [
+        "Low-level programming & memory concepts",
+        "Vulnerability creation & exploitation",
+        "Debugging & disassembly",
+        "Exploit limitations & mitigations",
+        "Malware analysis basics"
+      ],
+      "mode": "Online | Live | Mentor-Led"
+    },
+    {
+      "id": 10,
+      "title": "COTMS",
+      "fullName": "Certified OSINT & Threat Monitoring Specialist",
+      "level": "Intermediate",
+      "about": "A structured OSINT certification focused on real-world intelligence gathering, digital investigations, and threat monitoring using open-source data and analytical techniques.",
+      "highlights": [
+        "Real-world OSINT investigations",
+        "SOCMINT, GEOINT & Dark Web coverage",
+        "Hands-on intelligence workflows",
+        "Automation & AI in OSINT",
+        "Case-based learning approach"
+      ],
+      "modules": [
+        "OSINT Foundations",
+        "Web Reconnaissance",
+        "Social Media Intelligence (SOCMINT)",
+        "Geospatial Intelligence (GEOINT)",
+        "Dark Web Investigations",
+        "Cyber Threat Intelligence (CTI)"
+      ],
+      "tools": [
+        "Maltego",
+        "SpiderFoot",
+        "Shodan",
+        "Recon-ng",
+        "theHarvester",
+        "Google Dorks",
+        "IntelligenceX"
+      ],
+      "curriculum": [
+        "Data collection & verification",
+        "Social media intelligence techniques",
+        "Geolocation & image analysis",
+        "Dark web investigations",
+        "AI & automation in intelligence"
+      ],
+      "mode": "Online | Live | Mentor-Led"
+    },
+    {
+      "id": 11,
+      "title": "OCDPA",
+      "fullName": "OffSecDiary Certified Data Privacy Associate",
+      "level": "Beginner",
+      "about": "A GRC-focused certification covering data privacy, governance, risk management, and compliance aligned with global regulations like GDPR, HIPAA, and DPDP.",
+      "highlights": [
+        "Privacy & compliance fundamentals",
+        "Real-world GRC frameworks",
+        "Risk assessment & DPIA",
+        "Privacy engineering concepts",
+        "Regulatory alignment (GDPR, HIPAA)"
+      ],
+      "modules": [
+        "Privacy Fundamentals",
+        "GRC & Governance Models",
+        "Global Privacy Regulations",
+        "Risk Assessment & DPIA",
+        "Security Controls & Compliance",
+        "Incident Management"
+      ],
+      "tools": [
+        "OneTrust",
+        "SIEM",
+        "ISO27001",
+        "ServiceNow",
+        "Excel"
+      ],
+      "curriculum": [
+        "Data lifecycle & privacy risks",
+        "Privacy frameworks & governance",
+        "Global regulations & compliance",
+        "Risk management & audits",
+        "Incident response & data breaches"
+      ],
+      "mode": "Online | Live | Mentor-Led"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "CARLA": {
+    "badge_image": "/images/cert/Carla.png"
+  },
+  "CISEH": {
+    "badge_image": "/images/cert/CISEH.png"
+  },
+  "OCDFS": {
+    "badge_image": "/images/cert/OCDFS.png"
+  },
+  "OCDS": {
+    "badge_image": "/images/cert/OCDS.png"
+  },
+  "OCWS": {
+    "badge_image": "/images/cert/OCWS.png"
+  },
+  "RedVector": {
+    "badge_image": "/images/cert/RedVector.png"
+  },
+  "OCMEF": {
+    "badge_image": "/images/cert/OCMEF.png"
+  },
+  "OCDPA": {
+    "badge_image": "/images/cert/OCDPA.png"
+  },
+  "COTMS": {
+    "badge_image": "/images/cert/COTMS.png"
+  }
+}

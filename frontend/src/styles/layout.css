@@ -1,0 +1,72 @@
+/* ===============================
+   GLOBAL LAYOUT SYSTEM (V2)
+   =============================== */
+
+/* Page wrapper used by Layout.jsx */
+.app-shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Main content area between header & footer */
+.app-content {
+  flex: 1;
+  width: 100%;
+}
+
+/* Constrained content container */
+.page-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+}
+
+/* Page titles */
+.page-title {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Page subtitles / intro text */
+.page-subtitle {
+  max-width: 720px;
+  margin-bottom: 2.5rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* Section spacing */
+.section {
+  margin-bottom: 4rem;
+}
+
+/* Simple grid helper */
+.grid {
+  display: grid;
+  gap: 2rem;
+}
+
+.grid-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .page-container {
+    padding: 2rem 1.2rem;
+  }
+
+  .page-title {
+    font-size: 1.6rem;
+  }
+
+  .grid-2,
+  .grid-3 {
+    grid-template-columns: 1fr;
+  }
+}

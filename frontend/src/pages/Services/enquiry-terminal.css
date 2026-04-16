@@ -1,0 +1,402 @@
+.enquiry-terminal-page {
+  min-height: 100vh;
+  background: #111111;
+  color: #ffffff;
+  padding: 40px 20px;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.enquiry-terminal-page .back-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  border: 2px solid #dc2626;
+  color: #dc2626;
+  padding: 12px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: "Orbitron", sans-serif;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.enquiry-terminal-page .back-button:hover {
+  background: #dc2626;
+  color: #ffffff;
+  transform: translateX(-5px);
+}
+
+.enquiry-terminal-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Header Section */
+.terminal-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.terminal-tag-box {
+  display: inline-block;
+  background: rgba(220, 38, 38, 0.1);
+  border: 2px solid #dc2626;
+  padding: 10px 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.terminal-tag {
+  font-family: "Orbitron", sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  color: #ef4444;
+  letter-spacing: 2px;
+}
+
+.terminal-title {
+  display: flex;
+  flex-direction: column;
+  align-items: auto;
+  gap: 10px;
+  margin-bottom: 5px;
+}
+
+.terminal-title h2 {
+  font-family: "Orbitron", sans-serif;
+  font-size: 48px;
+  font-weight: 900;
+  color: #a92121;
+  margin: 5;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.accent-line {
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #dc2626, transparent);
+  margin: 5px 0;
+}
+
+.section-title {
+  font-family: "Orbitron", sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.terminal-subtitle {
+  font-family: "Orbitron", sans-serif;
+  font-size: 18px;
+  color: #ef4444;
+  margin: 20px 0 10px 0;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.terminal-subtitle .service-name {
+  color: #dc2626;
+  font-weight: bold;
+}
+
+.terminal-description {
+  font-family: "Rajdhani", sans-serif;
+  font-size: 16px;
+  color: #c0c0c0;
+  margin: 15px 0 0 0;
+  line-height: 1.6;
+}
+
+/* Service Info Card */
+.service-info-card {
+  background: rgba(220, 38, 38, 0.05);
+  border: 2px solid #dc2626;
+  border-radius: 12px;
+  padding: 30px;
+  margin-bottom: 30px;
+  backdrop-filter: blur(10px);
+}
+
+.service-card-content h3 {
+  font-family: "Orbitron", sans-serif;
+  font-size: 24px;
+  color: #ef4444;
+  margin: 0 0 15px 0;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.service-card-content p {
+  font-family: "Rajdhani", sans-serif;
+  font-size: 15px;
+  color: #c0c0c0;
+  line-height: 1.8;
+  margin: 0;
+}
+
+/* Form Section */
+.terminal-form-section {
+  background: rgba(255, 255, 255, 0.02);
+  border: 2px solid rgba(220, 38, 38, 0.3);
+  border-radius: 12px;
+  padding: 30px;
+  backdrop-filter: blur(10px);
+}
+
+.terminal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.form-group label {
+  font-family: "Orbitron", sans-serif;
+  font-size: 13px;
+  font-weight: bold;
+  color: #ef4444;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  background: rgba(0, 0, 0, 0.6);
+  border: 2px solid #dc2626;
+  color: #ffffff;
+  padding: 14px 16px;
+  border-radius: 8px;
+  font-family: "Courier New", monospace;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  resize: vertical;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: rgba(192, 192, 192, 0.5);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #dc2626;
+  background: rgba(220, 38, 38, 0.05);
+  box-shadow: 0 0 20px rgba(220, 38, 38, 0.2);
+}
+
+.form-group select {
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23dc2626' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 20px;
+  padding-right: 40px;
+  cursor: pointer;
+  color: #ffffff;
+}
+
+.form-group select option {
+  background: #111111;
+  color: #ffffff;
+  border: none;
+  padding: 12px;
+  margin: 4px 0;
+}
+
+.form-group select option:hover {
+  background: #dc2626;
+  color: #ffffff;
+}
+
+.form-group select option:checked {
+  background: linear-gradient(135deg, #dc2626 0%, #ef4444 100%);
+  color: #ffffff;
+}
+
+.submit-button {
+  background: linear-gradient(135deg, #dc2626 0%, #ef4444 100%);
+  border: 2px solid #dc2626;
+  color: #ffffff;
+  padding: 16px 40px;
+  border-radius: 8px;
+  font-family: "Orbitron", sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+}
+
+.submit-button:hover:not(:disabled) {
+  background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+  box-shadow: 0 0 30px rgba(220, 38, 38, 0.5);
+  transform: translateY(-2px);
+}
+
+.submit-button:active:not(:disabled) {
+  transform: translateY(0px);
+}
+
+.submit-button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* Security Notice */
+.security-notice {
+  margin-top: 40px;
+  padding: 20px 24px;
+  background: rgba(220, 38, 38, 0.1);
+  border: 2px solid rgba(220, 38, 38, 0.3);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  text-align: center;
+}
+
+.notice-badge {
+  font-size: 24px;
+  flex-shrink: 0;
+}
+
+.security-notice p {
+  font-family: "Rajdhani", sans-serif;
+  font-size: 14px;
+  color: #c0c0c0;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Not Found */
+.not-found {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.not-found h1 {
+  font-family: "Orbitron", sans-serif;
+  font-size: 48px;
+  color: #dc2626;
+  margin: 0 0 30px 0;
+}
+
+.not-found button {
+  background: #dc2626;
+  color: #ffffff;
+  border: none;
+  padding: 14px 32px;
+  border-radius: 8px;
+  font-family: "Orbitron", sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.not-found button:hover {
+  background: #ef4444;
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .enquiry-terminal-page {
+    padding: 20px 15px;
+  }
+
+  .terminal-title {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .terminal-title h1 {
+    font-size: 32px;
+  }
+
+  .terminal-form-section {
+    padding: 30px 20px;
+  }
+
+  .terminal-form {
+    gap: 20px;
+  }
+
+  .accent-line {
+    max-width: 80px;
+  }
+}
+
+@media (max-width: 480px) {
+  .enquiry-terminal-page {
+    padding: 15px 10px;
+  }
+
+  .enquiry-terminal-page .back-button {
+    font-size: 12px;
+    padding: 10px 16px;
+  }
+
+  .terminal-title h1 {
+    font-size: 24px;
+  }
+
+  .terminal-subtitle {
+    font-size: 14px;
+  }
+
+  .terminal-description {
+    font-size: 13px;
+  }
+
+  .service-info-card {
+    padding: 20px;
+  }
+
+  .service-card-content h3 {
+    font-size: 18px;
+  }
+
+  .service-card-content p {
+    font-size: 13px;
+  }
+
+  .terminal-form-section {
+    padding: 20px 15px;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    padding: 12px 14px;
+    font-size: 13px;
+  }
+
+  .submit-button {
+    padding: 14px 24px;
+    font-size: 12px;
+  }
+}

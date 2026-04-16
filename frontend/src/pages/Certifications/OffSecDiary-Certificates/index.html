@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>OffSecDiary | Universal Verification Portal</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+
+<body>
+
+  <div class="page-wrapper">
+
+    <!-- HEADER -->
+    <header class="osd-header">
+      <div class="logo">
+          <img src="logo.png" alt="OffSecDiary Logo">
+      </div>
+      <div class="brand">
+        <h1>OffSecDiary</h1>
+        <p>Hack | Defend | Innovate</p>
+      </div>
+    </header>
+
+    <!-- EVENT SWITCHER -->
+    <section class="event-menu">
+      <h2>Select Verification Type</h2>
+
+      <div class="event-grid">
+
+        <button class="event-btn" data-target="ctf-part">🕵️‍♂️ CTF Participation</button>
+        <button class="event-btn" data-target="ctf-win">🏆 CTF Winners</button>
+        <button class="event-btn" data-target="intern-cert">💼 Certifications</button>
+        <button class="event-btn" data-target="guest-cert">🎤 Guest Speakers</button>
+        <button class="event-btn" data-target="sr-cert">⭐ Special Recognition</button>
+        <button class="event-btn" data-target="ctf-badge">🎖 CTF Winner Badges</button>
+        <button class="event-btn" data-target="shadow-badge">🛡 Shadow Corps Badges</button>
+        <button class="event-btn" data-target="cadet-badge">🎓 Cadet Domain Badges</button>
+
+      </div>
+    </section>
+
+    <!-- VERIFICATION PANELS -->
+    <section id="verification-panels">
+
+      <!-- TEMPLATE OF PANEL -->
+      <div class="verify-wrapper hidden" id="ctf-part">
+        <h3>CTF Participation Certificates</h3>
+        <p class="subtitle">Enter Certificate ID printed on top-left of the certificate.</p>
+
+        <form class="verify-form" data-json="data/ctf_participation.json">
+          <input type="text" placeholder="e.g. OFSD-CTF-25-0000" class="cert-input" required>
+          <button type="submit">Verify</button>
+        </form>
+
+        <div class="results"></div>
+      </div>
+
+      <!-- WINNERS -->
+      <div class="verify-wrapper hidden" id="ctf-win">
+        <h3>CTF Winners Certificates</h3>
+        <p class="subtitle">Enter Certificate ID printed on top-left of the certificate.</p>
+
+        <form class="verify-form" data-json="data/ctf_winners.json">
+          <input type="text" placeholder="e.g. OFSD-CTF-WIN-25-0000" class="cert-input" required>
+          <button type="submit">Verify</button>
+        </form>
+
+        <div class="results"></div>
+      </div>
+
+      <!-- INTERNSHIP -->
+      <div class="verify-wrapper hidden" id="intern-cert">
+        <h3>Certifications</h3>
+        <p class="subtitle">Enter Certificate ID printed on top-left of the certificate.</p>
+
+        <form class="verify-form" data-json="data/internship_certificates.json">
+          <input type="text" placeholder="e.g. OSD-INT-25-0000" class="cert-input" required>
+          <button type="submit">Verify</button>
+        </form>
+
+        <div class="results"></div>
+      </div>
+
+      <!-- GUEST -->
+      <div class="verify-wrapper hidden" id="guest-cert">
+        <h3>Guest Speaker Certificates</h3>
+        <p class="subtitle">Enter Certificate ID printed on top-left of the certificate.</p>
+        
+
+        <form class="verify-form" data-json="data/internship_guest_speakers.json">
+          <input type="text" placeholder="e.g. OSD-GSP-25-0000" class="cert-input" required>
+          <button type="submit">Verify</button>
+        </form>
+
+        <div class="results"></div>
+      </div>
+
+      <!-- SPECIAL RECOGNITION -->
+      <div class="verify-wrapper hidden" id="sr-cert">
+        <h3>Special Recognition Certificates</h3>
+        <p class="subtitle">Enter Certificate ID printed on top-left of the certificate.</p>
+
+        <form class="verify-form" data-json="data/internship_special_recognition.json">
+          <input type="text" placeholder="e.g. OSD-REC-25-0000" class="cert-input" required>
+          <button type="submit">Verify</button>
+        </form>
+
+        <div class="results"></div>
+      </div>
+      
+      <!-- BADGES -->
+      <div class="verify-wrapper hidden" id="ctf-badge">
+        <h3>CTF Winner Badges</h3>
+        <p class="subtitle">Enter Badge ID mentioned in the filename.</p>
+
+        <form class="verify-form" data-json="data/ctf_winner_badges.json">
+          <input type="text" placeholder="e.g. OFSD-CTF-BDG-25-0000" class="cert-input" required>
+          <button type="submit">Verify</button>
+        </form>
+
+        <div class="results"></div>
+      </div>
+
+      <!--SHADOW CORPS BADGES -->
+      <div class="verify-wrapper hidden" id="shadow-badge">
+        <h3>Shadow Corps Badges</h3>
+        <p class="subtitle">Enter Referral ID to verify your shadow corps badge.</p>
+
+        <form class="verify-form" data-json="data/shadow_corps_badges.json">
+          <input type="text" placeholder="e.g. OSD-SC-000" class="cert-input" required>
+          <button type="submit">Verify</button>
+        </form>
+
+        <div class="results"></div>
+      </div>
+      
+      <!-- CADET BADGES -->
+      <div class="verify-wrapper hidden" id="cadet-badge">
+        <h3>Cadet Badges</h3>
+        <p class="subtitle">Enter Cadet Number to verify your assigned domain badge.</p>
+
+        <form class="verify-form" data-json="data/cadet_badges.json">
+          <input type="text" placeholder="e.g. OSD-CADET-ID.000" class="cert-input" required>
+          <button type="submit">Verify</button>
+        </form>
+
+        <div class="results"></div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <!-- FOOTER ALWAYS AT BOTTOM -->
+  <footer class="osd-footer">
+    <div class="footer-container">
+
+      <!-- SOCIAL -->
+      <div class="footer-left">
+        <h3>Follow Us</h3>
+        <div class="footer-underline"></div>
+
+        <div class="social-icons">
+          <a href="https://www.facebook.com/share/1BFWxgT9fg/" class="circle-icon"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://x.com/OffSecDiary" class="circle-icon"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.instagram.com/offsecdiary" class="circle-icon"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/company/offsecdiary/" class="circle-icon"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+
+      <!-- CONTACT -->
+      <div class="footer-right">
+        <h3>Contact Us</h3>
+
+        <div class="contact-row">
+
+          <div class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <div>
+              <span>Email</span>
+              <p>offsecdiary@gmail.com</p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <i class="fas fa-headset"></i>
+            <div>
+              <span>Support Email</span>
+              <p>support@offsecdiary.com</p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <i class="fab fa-whatsapp"></i>
+            <div>
+              <span>WhatsApp</span>
+              <p>8871440062, 9667493039</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      © 2025 OffSecDiary — All Rights Reserved
+    </div>
+  </footer>
+
+<script>
+  // Switch panels
+  document.querySelectorAll(".event-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+      document.querySelectorAll(".verify-wrapper").forEach(v => v.classList.add("hidden"));
+      document.getElementById(btn.dataset.target).classList.remove("hidden");
+      window.scrollTo({ top: 350, behavior: "smooth" });
+    });
+  });
+
+  // Verification logic
+  document.querySelectorAll(".verify-form").forEach(form => {
+    form.addEventListener("submit", async e => {
+      e.preventDefault();
+
+      let input = form.querySelector(".cert-input").value.trim().toUpperCase();
+      let resultsBox = form.nextElementSibling;
+
+      resultsBox.innerHTML = "<div class='loading'>Checking...</div>";
+
+      const jsonURL = form.dataset.json;
+
+      try {
+        let data = await fetch(jsonURL).then(r => r.json());
+        let info = data[input];
+
+        if (!info) {
+          resultsBox.innerHTML =
+            `<div class='invalid'>
+               ❌ Certificate Not Found<br>
+               ID: <strong>${input}</strong>
+             </div>`;
+        } else {
+          let formatted = Object.entries(info)
+            .filter(([k, v]) => k !== "badge_image") 
+            .map(([k, v]) => `<p><strong>${k.toUpperCase()}:</strong> ${v}</p>`)
+            .join("");
+
+          // Add badge image if present
+          if (info.badge_image) {
+            formatted += `<img src="${info.badge_image}" class="badge-img">`;
+          }
+
+          resultsBox.innerHTML =
+            `<div class='valid'>
+               ✅ Certificates & Badges Verified<br>
+               ID: <strong>${input}</strong>
+               <div class='details'>${formatted}</div>
+             </div>`;
+        }
+
+      } catch (err) {
+        resultsBox.innerHTML = "<div class='invalid'>Error loading registry.</div>";
+      }
+    });
+  });
+</script>
+
+</body>
+</html>

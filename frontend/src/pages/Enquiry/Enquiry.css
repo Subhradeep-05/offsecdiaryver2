@@ -1,0 +1,321 @@
+/* ====== GLOBAL ====== */
+.contact-page {
+  min-height: 100vh;
+  background: #050505;
+  color: #e5e5e5;
+  padding: 40px 20px;
+  font-family: "Segoe UI", sans-serif;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Noise overlay (optional, OS effect) */
+.contact-page::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  opacity: 0.03;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ====== HERO ====== */
+.contact-hero {
+  text-align: center;
+  margin-bottom: 40px;
+  position: relative;
+  z-index: 1;
+}
+
+.contact-hero h1 {
+  font-size: 3.5rem;
+  font-weight: 900;
+  letter-spacing: 3px;
+  color: #fff;
+}
+
+.contact-hero h1 span {
+  color: #ff1a1a;
+}
+
+.contact-hero p {
+  color: #888;
+  font-family: monospace;
+  margin-top: 8px;
+  letter-spacing: 1px;
+}
+
+/* ====== GRID ====== */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  max-width: 1200px;
+  margin: auto;
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 900px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ====== FORM PANEL ====== */
+.contact-form {
+  background: linear-gradient(145deg, #0b0b0b, #030303);
+  border: 1px solid rgba(255, 0, 0, 0.3);
+  border-radius: 18px;
+  padding: 40px;
+  box-shadow: 0 0 30px rgba(255, 0, 0, 0.15);
+}
+
+.contact-form h2 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #fff;
+  margin-bottom: 25px;
+  font-size: 1.5rem;
+}
+
+/* Inputs */
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  width: 100%;
+  background: #070707;
+  border: 1px solid #1a1a1a;
+  color: #fff;
+  padding: 14px;
+  border-radius: 10px;
+  outline: none;
+  transition: 0.3s ease;
+  margin-bottom: 15px;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #555;
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+  border-color: #ff1a1a;
+  box-shadow: 0 0 10px rgba(255, 26, 26, 0.4);
+}
+
+/* Submit Button */
+.contact-form button {
+  width: 100%;
+  background: #ff1a1a;
+  border: none;
+  color: #000;
+  font-weight: bold;
+  padding: 16px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  letter-spacing: 1px;
+}
+
+.contact-form button:hover {
+  background: #ff3030;
+  box-shadow: 0 0 20px rgba(255, 26, 26, 0.8);
+}
+
+/* ====== INFO PANEL ====== */
+.contact-info {
+  background: linear-gradient(145deg, #090909, #030303);
+  border: 1px solid rgba(255, 0, 0, 0.2);
+  border-radius: 18px;
+  padding: 35px;
+  box-shadow: 0 0 20px rgba(255, 26, 26, 0.1);
+}
+
+.contact-info h3 {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+.contact-info p {
+  color: #aaa;
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+}
+
+/* Social Icons */
+.socials {
+  display: flex;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.socials a {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #1a1a1a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  color: #777;
+  transition: 0.3s ease;
+}
+
+.socials a:hover {
+  border-color: #ff1a1a;
+  color: #ff1a1a;
+  box-shadow: 0 0 15px rgba(255, 26, 26, 0.5);
+}
+
+/* Advisory Box */
+.official-box {
+  background: rgba(255, 26, 26, 0.08);
+  border: 1px solid rgba(255, 26, 26, 0.3);
+  border-radius: 12px;
+  padding: 15px;
+  margin-top: 25px;
+  color: #ffb3b3;
+  font-family: monospace;
+  font-size: 0.8rem;
+}
+
+/* ====== FAQ ====== */
+.faq-section {
+  margin-top: 60px;
+  text-align: center;
+}
+
+.faq-section h2 {
+  font-size: 2.5rem;
+  color: #fff;
+  margin-bottom: 30px;
+}
+
+.faq-section h2 span {
+  color: #ff1a1a;
+}
+
+.faq-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+@media (max-width: 1200px) {
+  .faq-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .faq-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .faq-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* ====== FLIP CARD ====== */
+/* ==========================================================================
+   ENHANCED FLIP CARD THEME
+   ========================================================================== */
+.flip-card {
+  perspective: 1000px;
+  height: 220px;
+}
+
+.flip-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  cursor: pointer;
+}
+
+.flip-front,
+.flip-back {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  border-radius: 12px; /* Sharper, more technical corners */
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: border-color 0.3s ease;
+}
+
+/* FRONT: Tactical Dark Mode */
+.flip-front {
+  background: #0a0a0a;
+  border: 1px solid #1a1a1a;
+  /* Signature Vertical Red Bar on the side */
+  border-left: 3px solid #dc2626; 
+}
+
+.flip-front .icon {
+  color: #dc2626;
+  margin-bottom: 12px;
+  filter: drop-shadow(0 0 5px rgba(220, 38, 38, 0.3));
+}
+
+.flip-front h3 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #eee;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  line-height: 1.4;
+}
+
+.flip-front span {
+  margin-top: 15px;
+  color: #dc2626;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+}
+
+/* BACK: Deep Onyx with Subtle Red Accents (Replacement for the bright red) */
+.flip-back {
+  background: #0d0d0d; /* Slightly lighter than the front to distinguish */
+  border: 1px solid #dc2626; /* Red border to show it's "Active" */
+  color: #bbb; /* Light gray text for better readability than pure white */
+  transform: rotateY(180deg);
+  box-shadow: inset 0 0 20px rgba(220, 38, 38, 0.05);
+}
+
+.flip-back p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.flip-back small {
+  margin-top: 15px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.65rem;
+  color: #555;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* HOVER EFFECT */
+.flip-card:hover .flip-front {
+  border-color: #333;
+  background: #0f0f0f;
+}

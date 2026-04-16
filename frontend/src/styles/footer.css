@@ -1,0 +1,162 @@
+/* ===============================
+   COMMAND FOOTER — V2
+   =============================== */
+
+.command-footer {
+  background: linear-gradient(
+    180deg,
+    rgba(10, 0, 0, 0.95),
+    rgba(0, 0, 0, 0.98)
+  );
+  border-top: 1px solid rgba(255, 40, 40, 0.35);
+  box-shadow: 0 -20px 40px rgba(255, 40, 40, 0.12);
+  color: #cfcfcf;
+  font-family: "JetBrains Mono", monospace;
+}
+
+/* ===============================
+   SCANLINE
+   =============================== */
+
+.footer-scanline {
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 40, 40, 0.9),
+    transparent
+  );
+  animation: footerScan 3.5s linear infinite;
+}
+
+/* ===============================
+   MAIN CONTENT
+   =============================== */
+
+.footer-inner {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem;
+  display: grid;
+  gap: 2.5rem;
+}
+
+/* ===============================
+   BRAND
+   =============================== */
+
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.footer-logo {
+  height: 40px;
+  filter: drop-shadow(0 0 8px rgba(255, 42, 42, 0.6));
+}
+
+.footer-name {
+  font-size: 1.2rem;
+  letter-spacing: 0.3em;
+  color: #eaeaea;
+  text-shadow:
+    0 0 12px rgba(255, 42, 42, 0.35),
+    0 0 22px rgba(255, 42, 42, 0.15);
+}
+
+/* ===============================
+   LINKS
+   =============================== */
+
+.footer-links {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 2rem;
+}
+
+.footer-col {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.footer-title {
+  font-size: 0.65rem;
+  letter-spacing: 0.25em;
+  color: rgba(255, 80, 80, 0.75);
+  margin-bottom: 0.4rem;
+}
+
+.footer-col a {
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  color: #cfcfcf;
+  text-decoration: none;
+  opacity: 0.75;
+  transition: all 0.2s ease;
+}
+
+.footer-col a:hover {
+  color: #ff4d4d;
+  opacity: 1;
+  text-shadow: 0 0 8px rgba(255, 42, 42, 0.4);
+}
+
+.footer-meta {
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  opacity: 0.65;
+}
+
+/* ===============================
+   SOCIAL LINKS
+   =============================== */
+
+.footer-socials {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.footer-socials a {
+  color: #cfcfcf;
+  font-size: 1.2rem;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.footer-socials a:hover {
+  color: #ff4d4d;
+  transform: scale(1.2);
+}
+
+/* ===============================
+   BOTTOM BAR
+   =============================== */
+
+.footer-bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  padding: 1.2rem 1.5rem;
+  border-top: 1px solid rgba(255, 40, 40, 0.25);
+  font-size: 0.6rem;
+  letter-spacing: 0.15em;
+  opacity: 0.7;
+  text-align: center;
+  align-items: center;
+}
+
+.footer-tagline {
+  opacity: 0.5;
+}
+
+/* ===============================
+   ANIMATION
+   =============================== */
+
+@keyframes footerScan {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}

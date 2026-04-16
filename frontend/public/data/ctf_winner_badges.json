@@ -1,0 +1,31 @@
+{
+  "OFSD-CTF-BDG-25-4387": {
+    "name": "Deepak ",
+    "position": "1st Rank",
+    "event": "OFSD Open Offensive CTF Challenge",
+    "event_date": "29 November 2025",
+    "issued_by": "OffSecDiary",
+    "status": "valid",
+    "badge_image": "images/badges/1st.png"
+  },
+
+  "OFSD-CTF-BDG-25-3748": {
+    "name": "Suraj Kumar",
+    "position": "2nd Rank",
+    "event": "OFSD Open Offensive CTF Challenge",
+    "event_date": "29 November 2025",
+    "issued_by": "OffSecDiary",
+    "status": "valid",
+    "badge_image": "images/badges/2nd.png"
+  },
+
+  "OFSD-CTF-BDG-25-1584": {
+    "name": "Parth Dabgar",
+    "position": "3rd Rank",
+    "event": "OFSD Open Offensive CTF Challenge",
+    "event_date": "29 November 2025",
+    "issued_by": "OffSecDiary",
+    "status": "valid",
+    "badge_image": "images/badges/3rd.png"
+  }
+}

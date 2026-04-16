@@ -1,0 +1,133 @@
+{
+  "OSD-INT-25-7805": {
+    "name": "D Shaun Angel",
+    "certificate_id": "OSD-INT-25-7805",
+    "intern_id": "OSD-KG-107",
+    "certificate_type": "Internship Completion",
+    "program": "1-month Offensive Security Internship",
+    "role": "KernelGhost",
+    "organization": "OffSecDiary",
+    "month_year": "November 2025",
+    "status": "Valid"
+  },
+
+  "OSD-INT-25-5032": {
+    "name": "Sujhal Gurav",
+    "certificate_id": "OSD-INT-25-5032",
+    "intern_id": "OSD-KG-126",
+    "certificate_type": "Internship Completion",
+    "program": "1-month Offensive Security Internship",
+    "role": "KernelGhost",
+    "organization": "OffSecDiary",
+    "month_year": "November 2025",
+    "status": "Valid"
+  },
+
+  "OSD-INT-25-7297": {
+    "name": "Hemanth",
+    "certificate_id": "OSD-INT-25-7297",
+    "intern_id": "OSD-KG-135",
+    "certificate_type": "Internship Completion",
+    "program": "1-month Offensive Security Internship",
+    "role": "KernelGhost",
+    "organization": "OffSecDiary",
+    "month_year": "November 2025",
+    "status": "Valid"
+  },
+
+  "OSD-INT-25-5947": {
+    "name": "Md. Anaam Abdul Azeem Shaikh",
+    "certificate_id": "OSD-INT-25-5947",
+    "intern_id": "OSD-KG-118",
+    "certificate_type": "Internship Completion",
+    "program": "1-month Offensive Security Internship",
+    "role": "KernelGhost",
+    "organization": "OffSecDiary",
+    "month_year": "November 2025",
+    "status": "Valid"
+  },
+
+  "OSD-INT-25-4041": {
+    "name": "Atul Singh Chandel",
+    "certificate_id": "OSD-INT-25-4041",
+    "intern_id": "OSD-KG-037",
+    "certificate_type": "Certificate of Completion",
+    "program": "RedVector MasterClass – Offensive Security Certification Program",
+    "role": "KernelGhost",
+    "organization": "OffSecDiary",
+    "month_year": "December 2025",
+    "status": "Valid"
+  },
+
+  "OSD-INT-25-7110": {
+    "name": "Jata Shankar Yadav",
+    "certificate_id": "OSD-INT-25-7110",
+    "intern_id": "OSD-KG-007",
+    "certificate_type": "Certificate of Completion",
+    "program": "RedVector MasterClass – Offensive Security Certification Program",
+    "role": "KernelGhost",
+    "organization": "OffSecDiary",
+    "month_year": "December 2025",
+    "status": "Valid"
+  },
+
+  "OSD-INT-25-9481": {
+    "name": "Harshit Narula",
+    "certificate_id": "OSD-INT-25-9481",
+    "intern_id": "OSD-KG-116",
+    "certificate_type": "Certificate of Completion",
+    "program": "RedVector MasterClass – Offensive Security Certification Program",
+    "role": "KernelGhost",
+    "organization": "OffSecDiary",
+    "month_year": "December 2025",
+    "status": "Valid"
+  },
+
+  "OSD-INT-25-2385": {
+    "name": "Piyush Kumar",
+    "certificate_id": "OSD-INT-25-2385",
+    "intern_id": "OSD-KG-024",
+    "certificate_type": "Certificate of Completion",
+    "program": "RedVector MasterClass – Offensive Security Certification Program",
+    "role": "KernelGhost",
+    "organization": "OffSecDiary",
+    "month_year": "December 2025",
+    "status": "Valid"
+  },
+
+  "OSD-INT-25-3074": {
+    "name": "Jatin",
+    "certificate_id": "OSD-INT-25-3074",
+    "intern_id": "OSD-KG-056",
+    "certificate_type": "Certificate of Completion",
+    "program": "RedVector MasterClass – Offensive Security Certification Program",
+    "role": "KernelGhost",
+    "organization": "OffSecDiary",
+    "month_year": "December 2025",
+    "status": "Valid"
+  },
+
+  "OSD-INT-25-5293": {
+    "name": "Tiksha Dhamija",
+    "certificate_id": "OSD-INT-25-5293",
+    "intern_id": "OSD-KG-261",
+    "certificate_type": "Certificate of Completion",
+    "program": "RedVector MasterClass – Offensive Security Certification Program",
+    "role": "KernelGhost",
+    "organization": "OffSecDiary",
+    "month_year": "December 2025",
+    "status": "Valid"
+  },
+
+  "OSD-INT-25-3463": {
+    "name": "Sumit Sharma",
+    "certificate_id": "OSD-INT-25-3463",
+    "intern_id": "OSD-KG-103",
+    "certificate_type": "Certificate of Completion",
+    "program": "RedVector MasterClass – Offensive Security Certification Program",
+    "role": "KernelGhost",
+    "organization": "OffSecDiary",
+    "month_year": "December 2025",
+    "status": "Valid"
+  }
+}

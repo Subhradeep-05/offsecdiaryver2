@@ -1,0 +1,28 @@
+{
+  "OFSD-CTF-WIN-25-4387": {
+    "name": "Deepak",
+    "position": "1st Rank",
+    "certificate_type": "CTF Winner Certificate",
+    "event": "OFSD Open Offensive CTF Challenge 2025",
+    "date": "29th November 2025",
+    "issued_by": "OffSecDiary"
+  },
+
+  "OFSD-CTF-WIN-25-3748": {
+    "name": "Suraj Kumar",
+    "position": "2nd Rank",
+    "certificate_type": "CTF Winner Certificate",
+    "event": "OFSD Open Offensive CTF Challenge 2025",
+    "date": "29th November 2025",
+    "issued_by": "OffSecDiary"
+  },
+
+  "OFSD-CTF-WIN-25-1584": {
+    "name": "Parth Dagbar",
+    "position": "3rd Rank",
+    "certificate_type": "CTF Winner Certificate",
+    "event": "OFSD Open Offensive CTF Challenge 2025",
+    "date": "29th November 2025",
+    "issued_by": "OffSecDiary"
+  }
+}
